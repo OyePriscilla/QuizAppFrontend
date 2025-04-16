@@ -21,7 +21,7 @@ const Registration = () => {
     // Send data to the backend using Axios
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/auth/signup",
+        "https://bible-quiz-backend-wgy3.onrender.com/api/auth/signup",
         {
           username,
           password,

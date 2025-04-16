@@ -31,7 +31,7 @@ const Dashboard = () => {
       const fetchQuizResults = async () => {
         try {
           const response = await axios.get(
-            `http://localhost:3000/api/dashboard/${username}`
+            `https://bible-quiz-backend-wgy3.onrender.com/api/dashboard/${username}`
           );
           setQuizResults(response.data);
         } catch (error) {

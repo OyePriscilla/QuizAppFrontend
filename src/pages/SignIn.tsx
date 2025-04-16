@@ -18,7 +18,7 @@ const SignIn = () => {
 
     // Send data to the backend using Axios
     try {
-      const response = await fetch("http://localhost:3000/api/auth/login", {
+      const response = await fetch("https://bible-quiz-backend-wgy3.onrender.com/api/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

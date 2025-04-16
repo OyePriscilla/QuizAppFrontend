@@ -52,7 +52,7 @@ const Quiz = () => {
     };
 
     try {
-      const response = await fetch("http://localhost:3000/api/quiz/results", {
+      const response = await fetch("https://bible-quiz-backend-wgy3.onrender.com/api/quiz/results", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -70,7 +70,7 @@ const Quiz = () => {
 
         try {
           const response = await axios.post(
-            "http://localhost:3000/api/dashboard/save",
+            "https://bible-quiz-backend-wgy3.onrender.com/api/dashboard/save",
             resultData
           );
           console.log("Quiz results saved successfully:", response.data);
