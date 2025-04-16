@@ -1,0 +1,402 @@
+[
+  {
+    "question": "Who was the mother of Moses?",
+    "options": [
+      "Jochebed",
+      "Leah",
+      "Sarah",
+      "Hannah"
+    ],
+    "answer": "Jochebed"
+  },
+  {
+    "question": "Who was Moses\u2019 sister who watched over him?",
+    "options": [
+      "Esther",
+      "Deborah",
+      "Miriam",
+      "Naomi"
+    ],
+    "answer": "Miriam"
+  },
+  {
+    "question": "What river was baby Moses placed into?",
+    "options": [
+      "Euphrates",
+      "Jordan",
+      "Tigris",
+      "Nile"
+    ],
+    "answer": "Nile"
+  },
+  {
+    "question": "How long did Jochebed hide baby Moses?",
+    "options": [
+      "1 year",
+      "1 month",
+      "6 months",
+      "3 months"
+    ],
+    "answer": "3 months"
+  },
+  {
+    "question": "Who found baby Moses in the basket?",
+    "options": [
+      "Pharaoh\u2019s daughter",
+      "A shepherd girl",
+      "A servant",
+      "A fisherman"
+    ],
+    "answer": "Pharaoh\u2019s daughter"
+  },
+  {
+    "question": "What does the name Moses mean?",
+    "options": [
+      "Saved one",
+      "Gift of God",
+      "Drawn out of water",
+      "Leader"
+    ],
+    "answer": "Drawn out of water"
+  },
+  {
+    "question": "Where did Moses grow up?",
+    "options": [
+      "In Canaan",
+      "In a cave",
+      "With shepherds",
+      "In Pharaoh\u2019s palace"
+    ],
+    "answer": "In Pharaoh\u2019s palace"
+  },
+  {
+    "question": "Why did Moses flee Egypt?",
+    "options": [
+      "He was sent away",
+      "He was afraid of Pharaoh",
+      "He killed an Egyptian",
+      "He got lost"
+    ],
+    "answer": "He killed an Egyptian"
+  },
+  {
+    "question": "Where did Moses go after leaving Egypt?",
+    "options": [
+      "Sinai",
+      "Canaan",
+      "Midian",
+      "Moab"
+    ],
+    "answer": "Midian"
+  },
+  {
+    "question": "Who did Moses marry?",
+    "options": [
+      "Rebecca",
+      "Zipporah",
+      "Ruth",
+      "Leah"
+    ],
+    "answer": "Zipporah"
+  },
+  {
+    "question": "What was the name of Moses\u2019 first son?",
+    "options": [
+      "Benjamin",
+      "Aaron",
+      "Gershom",
+      "Isaac"
+    ],
+    "answer": "Gershom"
+  },
+  {
+    "question": "What was the name of Moses\u2019 second son?",
+    "options": [
+      "Ezra",
+      "Samuel",
+      "Eli",
+      "Eliezer"
+    ],
+    "answer": "Eliezer"
+  },
+  {
+    "question": "What did Moses see on Mount Horeb?",
+    "options": [
+      "A giant stone",
+      "A golden calf",
+      "A burning bush",
+      "An angel"
+    ],
+    "answer": "A burning bush"
+  },
+  {
+    "question": "What did God say from the burning bush?",
+    "options": [
+      "You are chosen!",
+      "Follow Me!",
+      "Peace be with you",
+      "Moses! Moses!"
+    ],
+    "answer": "Moses! Moses!"
+  },
+  {
+    "question": "What excuse did Moses give for not going to Egypt?",
+    "options": [
+      "I\u2019m afraid",
+      "I am too old",
+      "I don\u2019t believe",
+      "I can\u2019t speak well"
+    ],
+    "answer": "I can\u2019t speak well"
+  },
+  {
+    "question": "What did God turn Moses' staff into?",
+    "options": [
+      "A scroll",
+      "A snake",
+      "A sword",
+      "A torch"
+    ],
+    "answer": "A snake"
+  },
+  {
+    "question": "What disease appeared and healed on Moses\u2019 hand?",
+    "options": [
+      "Spots",
+      "Leprosy",
+      "Blisters",
+      "Boils"
+    ],
+    "answer": "Leprosy"
+  },
+  {
+    "question": "What did Moses' water turn into?",
+    "options": [
+      "Honey",
+      "Blood",
+      "Oil",
+      "Milk"
+    ],
+    "answer": "Blood"
+  },
+  {
+    "question": "Who was Moses\u2019 brother?",
+    "options": [
+      "Joshua",
+      "Caleb",
+      "Levi",
+      "Aaron"
+    ],
+    "answer": "Aaron"
+  },
+  {
+    "question": "How did Aaron help Moses?",
+    "options": [
+      "He wrote scrolls",
+      "He guided the sheep",
+      "He cooked food",
+      "He spoke for him"
+    ],
+    "answer": "He spoke for him"
+  },
+  {
+    "question": "What did Moses and Aaron tell Pharaoh?",
+    "options": [
+      "Let my people go!",
+      "Set us free!",
+      "We come in peace!",
+      "Stop the slavery!"
+    ],
+    "answer": "Let my people go!"
+  },
+  {
+    "question": "What sea did God part for the Israelites?",
+    "options": [
+      "Red Sea",
+      "Dead Sea",
+      "Jordan River",
+      "Great Sea"
+    ],
+    "answer": "Red Sea"
+  },
+  {
+    "question": "What mountain did Moses receive the Ten Commandments on?",
+    "options": [
+      "Mount Sinai",
+      "Mount Zion",
+      "Mount Ararat",
+      "Mount Carmel"
+    ],
+    "answer": "Mount Sinai"
+  },
+  {
+    "question": "What did God give Moses on the mountain?",
+    "options": [
+      "Ten Commandments",
+      "A new name",
+      "A crown",
+      "A sword"
+    ],
+    "answer": "Ten Commandments"
+  },
+  {
+    "question": "What did the Israelites build to worship wrongly?",
+    "options": [
+      "A silver dove",
+      "A stone idol",
+      "A bronze serpent",
+      "A golden calf"
+    ],
+    "answer": "A golden calf"
+  },
+  {
+    "question": "What did Moses do to the tablets when he saw the idol?",
+    "options": [
+      "He broke them",
+      "He gave them to Aaron",
+      "He lost them",
+      "He hid them"
+    ],
+    "answer": "He broke them"
+  },
+  {
+    "question": "Who spoke to Moses face to face?",
+    "options": [
+      "God",
+      "Aaron",
+      "A prophet",
+      "An angel"
+    ],
+    "answer": "God"
+  },
+  {
+    "question": "What did God feed the Israelites in the desert?",
+    "options": [
+      "Bread from Egypt",
+      "Manna",
+      "Fish",
+      "Corn"
+    ],
+    "answer": "Manna"
+  },
+  {
+    "question": "How did God lead the Israelites by day?",
+    "options": [
+      "Sunlight",
+      "Torch",
+      "Pillar of cloud",
+      "Wind"
+    ],
+    "answer": "Pillar of cloud"
+  },
+  {
+    "question": "How did God lead the Israelites by night?",
+    "options": [
+      "Moonlight",
+      "Stars",
+      "Pillar of fire",
+      "Lamps"
+    ],
+    "answer": "Pillar of fire"
+  },
+  {
+    "question": "What did Moses strike to get water?",
+    "options": [
+      "A mountain",
+      "A wall",
+      "A tree",
+      "A rock"
+    ],
+    "answer": "A rock"
+  },
+  {
+    "question": "How many plagues did God send on Egypt?",
+    "options": [
+      "10",
+      "12",
+      "7",
+      "5"
+    ],
+    "answer": "10"
+  },
+  {
+    "question": "What was the final plague?",
+    "options": [
+      "Frogs",
+      "Darkness",
+      "Death of the firstborn",
+      "Flies"
+    ],
+    "answer": "Death of the firstborn"
+  },
+  {
+    "question": "What animal\u2019s blood saved the Israelites?",
+    "options": [
+      "Lamb",
+      "Bird",
+      "Goat",
+      "Cow"
+    ],
+    "answer": "Lamb"
+  },
+  {
+    "question": "Who led the Israelites after Moses?",
+    "options": [
+      "Aaron",
+      "Caleb",
+      "Joshua",
+      "Eliezer"
+    ],
+    "answer": "Joshua"
+  },
+  {
+    "question": "Where did Moses die?",
+    "options": [
+      "Mount Carmel",
+      "Mount Nebo",
+      "Mount Sinai",
+      "Mount Horeb"
+    ],
+    "answer": "Mount Nebo"
+  },
+  {
+    "question": "How old was Moses when he died?",
+    "options": [
+      "80",
+      "110",
+      "100",
+      "120"
+    ],
+    "answer": "120"
+  },
+  {
+    "question": "Who buried Moses?",
+    "options": [
+      "The elders",
+      "Joshua",
+      "God",
+      "Aaron"
+    ],
+    "answer": "God"
+  },
+  {
+    "question": "What was Moses\u2019 father\u2019s name?",
+    "options": [
+      "Nadab",
+      "Amram",
+      "Levi",
+      "Jacob"
+    ],
+    "answer": "Amram"
+  },
+  {
+    "question": "Who was Moses\u2019 father-in-law?",
+    "options": [
+      "Reuben",
+      "Jethro",
+      "Nahor",
+      "Gad"
+    ],
+    "answer": "Jethro"
+  }
+]

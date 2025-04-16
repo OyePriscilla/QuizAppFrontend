@@ -1,0 +1,38 @@
+[
+  {
+    "username": "Goodnews Oyebade",
+    "email": "a@a.com",
+    "Phone number": "08036605211",
+    "results": [
+      {
+        "quizzname": "Moses",
+        "score": "100",
+        "date": "2025-04-10T10:00:00Z"
+      }
+    ]
+  },
+  {
+    "username": "OgoOluwa Oyebade",
+    "email": "a@a.com",
+    "Phone number": "08036605211",
+    "results": [
+      {
+        "quizzname": "Joshua",
+        "score": "100",
+        "date": "2025-04-10T10:00:00Z"
+      }
+    ]
+  },
+  {
+    "username": "David Oyebade",
+    "email": "a@a.com",
+    "Phone number": "08036605211",
+    "results": [
+      {
+        "quizzname": "David",
+        "score": "100",
+        "date": "2025-04-10T10:00:00Z"
+      }
+    ]
+  }
+]
