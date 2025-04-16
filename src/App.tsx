@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { NavBar } from "../types";
 
 import Home from "./pages/Home";
@@ -21,14 +21,12 @@ const NavBars: NavBar[] = [
 function App() {
   return (
     <>
-      <BrowserRouter>
         <Nav />
         <Routes>
           {NavBars.map((item) => (
             <Route key={item.path} path={item.path} element={item.element} />
           ))}
         </Routes>
-      </BrowserRouter>
     </>
   );
 }
