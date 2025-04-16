@@ -1,0 +1,102 @@
+[
+  {
+    "question": "Who was the mother of Moses?",
+    "options": [
+      "Sarah",
+      "Leah",
+      "Hannah",
+      "Jochebed"
+    ],
+    "answer": "Jochebed"
+  },
+  {
+    "question": "What river was Moses placed into as a baby?",
+    "options": [
+      "Nile River",
+      "Jordan River",
+      "Red Sea",
+      "Euphrates River"
+    ],
+    "answer": "Nile River"
+  },
+  {
+    "question": "What did Moses\u2019 mother put him in before placing him in the river?",
+    "options": [
+      "A boat",
+      "A jar",
+      "A basket",
+      "A box"
+    ],
+    "answer": "A basket"
+  },
+  {
+    "question": "Who found baby Moses in the river?",
+    "options": [
+      "Queen of Egypt",
+      "Pharaoh\u2019s daughter",
+      "His sister Miriam",
+      "A servant girl"
+    ],
+    "answer": "Pharaoh\u2019s daughter"
+  },
+  {
+    "question": "Who helped take care of baby Moses after he was found?",
+    "options": [
+      "His aunt",
+      "His sister, Miriam",
+      "Pharaoh\u2019s wife",
+      "A nurse from Egypt"
+    ],
+    "answer": "His sister, Miriam"
+  },
+  {
+    "question": "What job did Moses\u2019 real mother have when he was a baby in the palace?",
+    "options": [
+      "Cook",
+      "Servant",
+      "His nurse",
+      "Teacher"
+    ],
+    "answer": "His nurse"
+  },
+  {
+    "question": "What does the name Moses mean?",
+    "options": [
+      "Drawn out of the water",
+      "Saved from danger",
+      "Gift of God",
+      "Born in a basket"
+    ],
+    "answer": "Drawn out of the water"
+  },
+  {
+    "question": "In which country was Moses born?",
+    "options": [
+      "Canaan",
+      "Midian",
+      "Israel",
+      "Egypt"
+    ],
+    "answer": "Egypt"
+  },
+  {
+    "question": "Who was the king ruling Egypt when Moses was born?",
+    "options": [
+      "Nebuchadnezzar",
+      "Herod",
+      "Pharaoh",
+      "Caesar"
+    ],
+    "answer": "Pharaoh"
+  },
+  {
+    "question": "What cruel order did Pharaoh give about Hebrew baby boys?",
+    "options": [
+      "To send them to the palace",
+      "To give them to Egyptians",
+      "To throw them in the river",
+      "To take them to the desert"
+    ],
+    "answer": "To throw them in the river"
+  }
+]
