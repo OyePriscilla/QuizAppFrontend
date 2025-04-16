@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import mosesQuizData from "../data/MosesQuiz.json";
 import ResultDetails from "../components/ResultDetails";
 import axios from "axios";
@@ -25,6 +25,8 @@ const Quiz = () => {
   const [quizDate, setQuizDate] = useState<string>("");
   const [isReady, setIsReady] = useState<boolean>(false);
   const [timer, setTimer] = useState<number>(900); // 15 minutes in seconds (900 seconds)
+
+  //@ts-ignore
   const [intervalId, setIntervalId] = useState<NodeJS.Timeout | null>(null); // To store the interval ID
 
   const handleSelectAnswer = (questionIndex: number, selected: string) => {

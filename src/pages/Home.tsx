@@ -1,40 +1,40 @@
 import { Link } from "react-router-dom";
-import moses from "../image/moses.png";
+// import moses from "../image/moses.png";
 
-const characters = [
-  {
-    name: "Moses",
-    img: {moses},
-  },
-  {
-    name: "Joseph",
-    img: {}
-  },
-  {
-    name: "Adam",
-    img: "https://cdn.pixabay.com/photo/2012/04/12/13/25/man-30357_1280.png",
-  },
-  {
-    name: "Abraham",
-    img: "https://cdn.pixabay.com/photo/2017/01/31/18/43/old-man-2024665_1280.png",
-  },
-  {
-    name: "David",
-    img: "https://cdn.pixabay.com/photo/2017/01/31/17/58/king-david-2024553_1280.png",
-  },
-  {
-    name: "Noah",
-    img: "https://cdn.pixabay.com/photo/2021/07/07/18/31/noah-6397412_1280.png",
-  },
-  {
-    name: "Peter",
-    img: "https://cdn.pixabay.com/photo/2017/12/22/16/11/st-peter-3037042_1280.png",
-  },
-  {
-    name: "Paul",
-    img: "https://cdn.pixabay.com/photo/2021/04/16/15/29/saint-paul-6172305_1280.png",
-  },
-];
+// const characters = [
+//   {
+//     name: "Moses",
+//     img: {moses},
+//   },
+//   {
+//     name: "Joseph",
+//     img: {}
+//   },
+//   {
+//     name: "Adam",
+//     img: "https://cdn.pixabay.com/photo/2012/04/12/13/25/man-30357_1280.png",
+//   },
+//   {
+//     name: "Abraham",
+//     img: "https://cdn.pixabay.com/photo/2017/01/31/18/43/old-man-2024665_1280.png",
+//   },
+//   {
+//     name: "David",
+//     img: "https://cdn.pixabay.com/photo/2017/01/31/17/58/king-david-2024553_1280.png",
+//   },
+//   {
+//     name: "Noah",
+//     img: "https://cdn.pixabay.com/photo/2021/07/07/18/31/noah-6397412_1280.png",
+//   },
+//   {
+//     name: "Peter",
+//     img: "https://cdn.pixabay.com/photo/2017/12/22/16/11/st-peter-3037042_1280.png",
+//   },
+//   {
+//     name: "Paul",
+//     img: "https://cdn.pixabay.com/photo/2021/04/16/15/29/saint-paul-6172305_1280.png",
+//   },
+// ];
 
 const Home = () => {
   return (
