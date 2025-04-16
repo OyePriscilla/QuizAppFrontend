@@ -46,6 +46,12 @@ const Nav = () => {
               >
                 Sign In
               </Link>
+              <Link
+                to="/register"
+                className="border-2 p-1 rounded-lg bg-white text-amber-900 hover:bg-gray-300"
+              >
+                Register
+              </Link>
             </>
           )}
         </div>
