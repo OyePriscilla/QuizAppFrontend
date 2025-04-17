@@ -38,7 +38,7 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-yellow-50 flex flex-col items-center justify-center px-4 py-12 text-center mt-8">
+    <div className="min-h-screen bg-yellow-50 flex flex-col items-center justify-center px-4 py-12 text-center">
       <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-pink-600 mb-4 drop-shadow-md">
         ✨ Welcome to Bible Quiz for Kids! ✨
       </h1>
@@ -65,8 +65,8 @@ const Home = () => {
       </div>
 
       <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-purple-700 mb-6">
-        Meet our <span className="text-pink-600 font-bold">Bible Heroes</span>{" "}
-        selected for this week. Hooray!!! 🎊
+        Meet our <span className="text-pink-600 font-bold">Bible Hero</span>{" "}
+        selected for the week. Hooray!!! 🎊
       </h2>
     </div>
   );

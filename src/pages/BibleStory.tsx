@@ -2,7 +2,7 @@ import React from 'react';
 
 const BibleStory: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-100 via-purple-100 to-blue-100 p-6 mt-16">
+    <div className="min-h-screen bg-gradient-to-br from-pink-100 via-purple-100 to-blue-100 p-6">
       <h1 className="text-3xl font-bold text-center text-purple-700 mb-8">📘 The Story of Moses</h1>
 
       <div className="space-y-8 max-w-4xl mx-auto">

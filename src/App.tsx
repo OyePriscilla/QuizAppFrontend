@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { NavBar } from "../types";
 
 import Home from "./pages/Home";
@@ -8,6 +8,8 @@ import Nav from "./components/Nav";
 import Registration from "./pages/Registration";
 import Dashboard from "./pages/Dashboard";
 import BibleStory from "./pages/BibleStory";
+import AdminLogin from "./pages/AdminLogin";
+import AdminDashboard from "./pages/AdminDashboard";
 
 const NavBars: NavBar[] = [
   { path: "/", element: <Home /> },
@@ -15,7 +17,9 @@ const NavBars: NavBar[] = [
   { path: "/quiz", element: <Quiz /> },
   { path: "/register", element: <Registration /> },
   { path: "/dashboard", element: <Dashboard />, },
-  { path: "/Bible-story", element: <BibleStory />}
+  { path: "/Bible-story", element: <BibleStory />},
+  { path: "/admin/login", element: <AdminLogin />},
+  { path: "/admin/dashboard", element: <AdminDashboard />},
 ];
 
 function App() {
@@ -27,6 +31,7 @@ function App() {
             <Route key={item.path} path={item.path} element={item.element} />
           ))}
         </Routes>
+        
     </>
   );
 }

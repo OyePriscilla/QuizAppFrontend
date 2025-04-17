@@ -2,6 +2,8 @@ import { useState } from "react";
 import mosesQuizData from "../data/MosesQuiz.json";
 import ResultDetails from "../components/ResultDetails";
 import axios from "axios";
+import { baseUrl } from "../api/BaseUrls";
+import { v4 as uuidv4 } from 'uuid';
 
 type QuizItem = {
   question: string;
@@ -29,6 +31,8 @@ const Quiz = () => {
   //@ts-ignore
   const [intervalId, setIntervalId] = useState<NodeJS.Timeout | null>(null); // To store the interval ID
 
+  const [resultData, setResultData] = useState<any>(null); // To store the result data
+
   const handleSelectAnswer = (questionIndex: number, selected: string) => {
     const updatedQuiz = [...quizState];
     updatedQuiz[questionIndex].userAnswer = selected;
@@ -44,20 +48,23 @@ const Quiz = () => {
       }
     });
 
-    const resultData = {
+    const result = {
+      id: uuidv4(),
       username,
       score: totalScore,
       date: new Date().toISOString(),
       quizState,
     };
 
+    setResultData(result); // Store the result data
+
     try {
-      const response = await fetch("https://bible-quiz-backend-wgy3.onrender.com/api/quiz/results", {
+      const response = await fetch(`${baseUrl}/api/quiz/results`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(resultData),
+        body: JSON.stringify(result),
       });
 
       const data = await response.json();
@@ -65,13 +72,13 @@ const Quiz = () => {
       if (response.ok) {
         setCompleted(true);
         setQuizScore(totalScore);
-        setQuizDate(resultData.date);
+        setQuizDate(result.date);
         setMessage(`🎉 Quiz submitted! You scored ${totalScore} points!`);
 
         try {
           const response = await axios.post(
-            "https://bible-quiz-backend-wgy3.onrender.com/api/dashboard/save",
-            resultData
+            `${baseUrl}/api/dashboard/save`,
+            result
           );
           console.log("Quiz results saved successfully:", response.data);
         } catch (error) {
@@ -115,6 +122,7 @@ const Quiz = () => {
     <>
       {completed ? (
         <ResultDetails
+          id={resultData.id}
           username={username || "Guest"}
           score={quizScore}
           date={quizDate}
@@ -122,15 +130,18 @@ const Quiz = () => {
         />
       ) : (
         <div>
-          <h1 className="text-4xl md:text-5xl font-extrabold text-purple-700 mb-4 drop-shadow-md text-center">
-            🧠 Bible Quiz Time!
-          </h1>
-          <p className="text-lg md:text-4xl mr-24 ml-24 text-gray-700 text-center mb-8">
-            🎉 Hi{" "}
-            <span className="text-purple-700 text-4xl text-bold">{username?.toUpperCase()},</span> <br></br> Let’s
-            have some fun while learning about the Bible! Answer each question
-            and see how many you get right! 🌟<p>Here you can track your quiz results.</p>
-          </p>
+         <h1 className="text-4xl md:text-5xl font-extrabold text-purple-700 mb-4 drop-shadow-md text-center">
+  🧠 Bible Quiz Time!
+</h1>
+<p className="text-lg md:text-2xl mx-6 md:mx-24 text-gray-700 text-center mb-8">
+  🎉 Hi{" "}
+  <span className="text-purple-700 text-4xl font-bold">{username?.toUpperCase()}</span>,<br />
+  Let’s have some fun while learning about the Bible! Answer each question and see how many you get right! 🌟
+</p>
+<p className="text-lg md:text-2xl mx-6 md:mx-24 text-gray-700 text-center mb-8">
+  Here you can track your quiz results.
+</p>
+
 
           {/* Prompt to ask if the student is ready to take the quiz */}
           {!isReady && (
@@ -162,16 +173,17 @@ const Quiz = () => {
             </div>
           )}
 
-          {/* Timer display */}
-          <div className="sticky top-0 z-50 text-end mr-16 items-end text-xl font-bold text-red-600 mb-4">
-                Time Remaining: {formatTime(timer)}
-              </div>
+
 
           {/* Show the quiz container only if the student is ready */}
           {isReady && (
             <div className="min-h-screen bg-gradient-to-br from-yellow-100 to-pink-100 flex flex-col items-center px-4 py-10">
 
-
+               {/* Timer display */}
+          <div className="sticky top-21 z-50 text-end mr-16 items-end font-bold text-2xl text-blue-900
+          ">
+                Time Remaining: {formatTime(timer)}
+              </div>
               {quizState.map((item, index) => (
                 <div
                   key={index}

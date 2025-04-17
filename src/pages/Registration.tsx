@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { baseUrl } from "../api/BaseUrls";
 
 const Registration = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
-
-  const navigate = useNavigate();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -21,7 +20,7 @@ const Registration = () => {
     // Send data to the backend using Axios
     try {
       const response = await axios.post(
-        "https://bible-quiz-backend-wgy3.onrender.com/api/auth/signup",
+        `${baseUrl}/api/auth/signup`,
         {
           username,
           password,
@@ -32,8 +31,6 @@ const Registration = () => {
       if (response.data.message) {
         setMessage(response.data.message);
         localStorage.setItem("username", username);
-        setTimeout(() => navigate("/quiz"), 1500);
-
 
 
         // Show success message
@@ -52,7 +49,7 @@ const Registration = () => {
           Create Your Account
         </h2>
 
-        {message && <p className="text-center text-red-500 mb-4">{message}</p>}
+        {message && <p className="text-center text-red-500 mb-4 font-bold">⚡⚡{message}⚡⚡</p>}
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>

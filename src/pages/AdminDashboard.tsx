@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { baseUrl } from "../api/BaseUrls";
+import axios from "axios";
 
+// Define types
 type QuizItem = {
   question: string;
   options: string[];
@@ -11,56 +12,102 @@ type QuizItem = {
 };
 
 type QuizResult = {
-  id:string,
+  id: string;
   username: string;
   score: number;
   date: string;
   quizState: QuizItem[];
 };
 
-const Dashboard = () => {
+const AdminDashboard = () => {
   const [quizResults, setQuizResults] = useState<QuizResult[]>([]);
   const [error, setError] = useState<string>("");
-  const [showResult, setShowResult] = useState<number | null>(null); // Track the clicked quiz index
+  const [search, setSearch] = useState<string>("");
+  const [showResult, setShowResult] = useState<number | null>(null);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const username = localStorage.getItem("username");
+  const fetchQuizResults = async () => {
+    try {
+      const response = await axios.get(`${baseUrl}/api/results`);
+      const sorted = response.data.sort(
+        (a: QuizResult, b: QuizResult) =>
+          new Date(b.date).getTime() - new Date(a.date).getTime()
+      );
+      setQuizResults(sorted);
+    } catch (error) {
+      setError("Error fetching quiz results");
+    }
+  };
 
-    if (!username) {
+  useEffect(() => {
+    const isAdmin = localStorage.getItem("isAdmin");
+    if (isAdmin !== "true") {
       navigate("/signin");
     } else {
-      const fetchQuizResults = async () => {
-        try {
-          const response = await axios.get(
-            `${baseUrl}/api/dashboard/${username}`
-          );
-          setQuizResults(response.data);
-        } catch (error) {
-          setError("Error fetching quiz results");
-        }
-      };
-
       fetchQuizResults();
     }
   }, [navigate]);
 
+  const handleLogout = () => {
+    localStorage.removeItem("isAdmin");
+    navigate("/signin");
+  };
+
+  const handleDelete = async (id: string) => {
+    if (!id) {
+      setError("Invalid ID. Cannot delete.");
+      return;
+    }
+    try {
+      await axios.delete(`${baseUrl}/api/results/${id}`);
+      fetchQuizResults();
+    } catch (err) {
+      setError("Error deleting quiz result");
+    }
+  };
+
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearch(e.target.value);
+  };
+
+  const filteredResults = quizResults.filter((result) =>
+    result.username.toLowerCase().includes(search.toLowerCase()) ||
+    new Date(result.date).toLocaleDateString().includes(search)
+  );
+
   const handleShowDetails = (index: number) => {
-    setShowResult(showResult === index ? null : index); // Toggle quiz details visibility
+    setShowResult(showResult === index ? null : index);
   };
 
   return (
     <div className="p-6 bg-gray-100 min-h-screen">
-      <h1 className="text-3xl font-bold text-center mb-6">User Dashboard</h1>
+      <h1 className="text-3xl font-bold text-center mb-6">Admin Dashboard</h1>
+
+      <div className="flex justify-between items-center mb-6">
+        <input
+          type="text"
+          placeholder="Search by name or date"
+          value={search}
+          onChange={handleSearch}
+          className="px-4 py-2 border rounded-md w-full max-w-sm"
+        />
+        <button
+          onClick={handleLogout}
+          className="ml-4 bg-red-500 hover:bg-red-600 text-white py-2 px-6 rounded-lg"
+        >
+          Log Out
+        </button>
+      </div>
+
       {error && <p className="text-red-500 text-center">{error}</p>}
 
-      {quizResults && quizResults.length > 0 ? (
+      {filteredResults.length > 0 ? (
         <div className="space-y-6">
-          {quizResults.map((result, index) => (
-            <div key={index}>
+          {filteredResults.map((result, index) => (
+            <div key={result.id}>
               <div
                 onClick={() => handleShowDetails(index)}
-                className="sticky top-0 bg-white p-6 rounded-lg shadow-lg border-2 border-gray-300 cursor-pointer transform hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-in-out"
+                className="bg-white p-6 rounded-lg shadow-lg border-2 border-gray-300 cursor-pointer transform hover:scale-105 hover:shadow-2xl transition-all duration-300"
               >
                 <div className="flex justify-between items-center mb-4">
                   <h3 className="text-2xl font-semibold text-gray-800 hover:text-amber-500 transition-colors duration-300">
@@ -73,22 +120,28 @@ const Dashboard = () => {
 
                 <div className="mb-4">
                   <p className="text-xl font-bold text-gray-700">
-                    Score:{" "}
-                    <span className="text-green-500">{result.score}</span> /{" "}
+                    Score: <span className="text-green-500">{result.score}</span> /{" "}
                     {result.quizState.length * 5}
                   </p>
                 </div>
 
                 <p className="text-gray-600 text-sm mb-4">
-                  Click on this card for full details of your result
+                  Click on this card for full details of the result
                 </p>
 
-                <div className="flex justify-end mt-4">
+                <div className="flex justify-between mt-4">
                   <button
                     onClick={() => handleShowDetails(index)}
                     className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-xl shadow-md transition duration-300"
                   >
                     {showResult === index ? "Hide Details" : "Show Details"}
+                  </button>
+
+                  <button
+                    onClick={() => handleDelete(result.id)}
+                    className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md"
+                  >
+                    Delete
                   </button>
                 </div>
               </div>
@@ -99,7 +152,7 @@ const Dashboard = () => {
                     const isCorrect = item.userAnswer === item.answer;
                     return (
                       <div
-                        key={qIndex}
+                        key={`${result.id}-${qIndex}`}
                         className={`p-4 rounded-lg shadow-md border-2 ${
                           isCorrect
                             ? "border-green-400 bg-green-50"
@@ -111,9 +164,10 @@ const Dashboard = () => {
                           {item.options.map((option, i) => {
                             const selected = item.userAnswer === option;
                             const correct = item.answer === option;
+                            const optionKey = `${item.question}-${i}`;
                             return (
                               <p
-                                key={i}
+                                key={optionKey}
                                 className={`px-3 py-1 rounded-lg ${
                                   correct
                                     ? "bg-green-200 font-bold"
@@ -131,9 +185,7 @@ const Dashboard = () => {
                           <p>
                             <strong>Your Answer:</strong>{" "}
                             <span
-                              className={
-                                isCorrect ? "text-green-700" : "text-red-700"
-                              }
+                              className={isCorrect ? "text-green-700" : "text-red-700"}
                             >
                               {item.userAnswer || "No answer"}{" "}
                               {isCorrect ? "✅" : "❌"}
@@ -142,9 +194,7 @@ const Dashboard = () => {
                           {!isCorrect && (
                             <p>
                               <strong>Correct Answer:</strong>{" "}
-                              <span className="text-green-700">
-                                {item.answer}
-                              </span>
+                              <span className="text-green-700">{item.answer}</span>
                             </p>
                           )}
                         </div>
@@ -163,4 +213,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default AdminDashboard;
