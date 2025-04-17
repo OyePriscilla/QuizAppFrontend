@@ -16,6 +16,7 @@ type ResultDetailsProps = {
 };
 
 const ResultDetails: React.FC<ResultDetailsProps> = ({
+  //@ts-ignore
   id,
   username,
   score,
