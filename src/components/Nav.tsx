@@ -1,8 +1,16 @@
+import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 const Nav = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
+
   const navigate = useNavigate();
   const username = localStorage.getItem("username");
+
+  useEffect(() => {
+    setIsLoggedIn(!!username)
+  });
+
 
   const handleLogout = () => {
     localStorage.removeItem("username");
@@ -35,12 +43,12 @@ const Nav = () => {
                 Dashboard
               </Link>
 
-              <button
+              { isLoggedIn && <button
                 onClick={handleLogout}
                 className="px-4 py-2 bg-red-100 text-red-700 rounded-full hover:bg-red-200 font-semibold transition-all"
               >
                 Log Out
-              </button>
+              </button> }
             </>
           ) : (
             <>
