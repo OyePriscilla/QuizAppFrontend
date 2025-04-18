@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { baseUrl } from "../api/BaseUrls";
 import { Eye, EyeOff } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Registration = () => {
   const [username, setUsername] = useState("");
@@ -60,7 +61,8 @@ const Registration = () => {
               htmlFor="username"
               className="block text-lg font-medium text-blue-700"
             >
-              Username <span className="text-red-500">(At least six(6) letters)</span>
+              Username{" "}
+              <span className="text-red-500">(At least six(6) letters)</span>
             </label>
             <input
               type="text"
@@ -78,7 +80,8 @@ const Registration = () => {
               htmlFor="password"
               className="block text-lg font-medium text-blue-700"
             >
-              Password <span className="text-red-500">(At least six(6) letters)</span>
+              Password{" "}
+              <span className="text-red-500">(At least six(6) letters)</span>
             </label>
             <input
               type={showPassword ? "text" : "password"}
@@ -88,11 +91,11 @@ const Registration = () => {
               className="mt-2 p-3 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
               placeholder="Enter your password"
               minLength={6}
-              />
-              <button
+            />
+            <button
               type="button"
               onClick={togglePassword}
-              className="absolute top-110 right-15 inset-y-0 flex items-center text-blue-600 hover:text-purple-600"
+              className="absolute top-115 right-15 inset-y-0 flex items-center text-blue-600 hover:text-purple-600"
             >
               {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
             </button>
@@ -108,9 +111,12 @@ const Registration = () => {
 
         <p className="text-center text-sm mt-4">
           Already have an account?{" "}
-          <a href="/signin" className="text-blue-500 hover:underline">
-            Login here
-          </a>
+          <Link
+            to="/signin"
+            className=" text-amber-600  hover:bg-yellow-100 font-semibold transition-all"
+          >
+            login here
+          </Link>
         </p>
       </div>
     </div>

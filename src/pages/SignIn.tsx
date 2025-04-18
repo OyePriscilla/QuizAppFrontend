@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { baseUrl } from "../api/BaseUrls";
 import { Eye, EyeOff } from "lucide-react";
 
@@ -7,12 +7,12 @@ import { Eye, EyeOff } from "lucide-react";
 
 
 const SignIn = () => {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [message, setMessage] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
   const togglePassword = () => setShowPassword(!showPassword);
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [message, setMessage] = useState("");
 
   const navigate = useNavigate();
 
@@ -100,7 +100,7 @@ const SignIn = () => {
               <button
               type="button"
               onClick={togglePassword}
-              className="absolute top-110 right-15 inset-y-0 flex items-center text-blue-600 hover:text-purple-600"
+              className="absolute top-105 right-15 inset-y-0 flex items-center text-blue-600 hover:text-purple-600"
             >
               {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
             </button>
@@ -116,9 +116,12 @@ const SignIn = () => {
 
         <p className="text-center text-sm mt-4">
           Don't have an account?{" "}
-          <a href="/register" className="text-blue-500 hover:underline">
+          <Link
+            to="/register"
+            className=" text-amber-600  hover:bg-yellow-100 font-semibold transition-all"
+          >
             Register here
-          </a>
+          </Link>
         </p>
       </div>
     </div>

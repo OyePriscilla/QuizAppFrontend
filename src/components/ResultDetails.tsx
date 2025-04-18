@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 type QuizItem = {
   question: string;
@@ -56,7 +57,9 @@ const ResultDetails: React.FC<ResultDetailsProps> = ({
               {score} / {totalScore}
             </span>
           </p>
-          <p className="text-sm text-gray-500">Date: {new Date(date).toLocaleString()}</p>
+          <p className="text-sm text-gray-500">
+            Date: {new Date(date).toLocaleString()}
+          </p>
 
           {/* Conditional Score Message */}
           <p className="text-lg font-semibold text-purple-600 mt-4">
@@ -65,17 +68,16 @@ const ResultDetails: React.FC<ResultDetailsProps> = ({
 
           <button
             onClick={() => window.print()}
-            className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-full shadow-md hover:bg-blue-600 print:hidden mr-8"
+            className="mt-4 px-2 py-2 bg-blue-500 text-white rounded-full shadow-md hover:bg-blue-600 print:hidden mr-2"
           >
-            🖨️ Print Result
+            🖨️Print Result
           </button>
-
-          <a
-            href="/dashboard"
-            className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-full shadow-md hover:bg-blue-600 print:hidden"
+          <Link
+            to="/dashboard"
+            className="mt-4 px-2 py-2 bg-blue-500 text-white rounded-full shadow-md hover:bg-blue-600 print:hidden"
           >
-            ✅ Check Result
-          </a>
+            ✅Check Result
+          </Link>
         </div>
       </div>
     </div>
