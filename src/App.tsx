@@ -1,4 +1,4 @@
-import { Routes, Route, BrowserRouter, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { NavBar } from "../types";
 
 import Home from "./pages/Home";
@@ -36,7 +36,7 @@ function App() {
             <Route key={item.path} path={item.path} element={item.element} />
           ))}
         </Routes>
-      
+
     </>
   );
 }
