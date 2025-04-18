@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-// import moses from "../image/moses.png";
+import video from "../video/Moses story.mp4";
 
 // const characters = [
 //   {
@@ -60,14 +60,19 @@ const Home = () => {
           to="/Bible-story"
           className="bg-pink-400 text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-pink-500 transition duration-300 shadow-lg"
         >
-          📚 Learn About the Bible
+          📚 Read About the Moses
         </Link>
       </div>
 
       <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-purple-700 mb-6">
-        Meet our <span className="text-pink-600 font-bold">Bible Hero</span>{" "}
+        Meet our{" "}
+        <span className="text-pink-600 font-bold">Bible Hero: MOSES</span>{" "}
         selected for the week. Hooray!!! 🎊
       </h2>
+      <video controls className="w-full rounded-xl shadow-lg">
+        <source src={video} />
+        Your browser does not support the video tag.
+      </video>
     </div>
   );
 };

@@ -10,48 +10,63 @@ const Nav = () => {
   };
 
   return (
-    <nav className="sticky top-0 w-full bg-amber-500 text-white shadow-md z-50 h-30">
-      <div className="max-w-7xl mx-auto px-4 py-3 flex flex-col sm:flex-row items-center justify-between">
+    <nav className="sticky top-0 w-full bg-amber-500 text-white shadow-md z-50 max-h-max">
+      <div className="w-full max-w-7xl mx-auto px-4 py-4 font-serif font-bold flex flex-col sm:flex-row items-center justify-between">
         {/* Logo or Title */}
-        <h1 className="text-2xl font-bold mb-2 sm:mb-0">Story Time</h1>
+        <h1 className="text-3xl sm:text-4xl font-extrabold text-white drop-shadow-md mb-4 sm:mb-0">
+          Inspiration Time 📖
+        </h1>
 
         {/* Navigation Links */}
-        <div className="flex flex-wrap justify-center sm:justify-end space-x-4">
-          <Link to="/" className="hover:underline">
+        <div className="flex flex-wrap justify-center sm:justify-end gap-3 sm:gap-4">
+          <Link
+            to="/"
+            className="px-4 py-2 bg-white text-amber-600 rounded-full hover:bg-yellow-100 font-semibold transition-all"
+          >
             Home
           </Link>
 
           {username ? (
             <>
-              <Link to="/dashboard" className="hover:underline">
+              <Link
+                to="/dashboard"
+                className="px-4 py-2 bg-white text-amber-600 rounded-full hover:bg-yellow-100 font-semibold transition-all"
+              >
                 Dashboard
               </Link>
-              <Link to="/quiz" className="hover:underline">
-                Quiz
-              </Link>
+
               <button
                 onClick={handleLogout}
-                className="border-2 px-3 py-1 rounded-lg bg-white text-amber-900 hover:bg-gray-300"
+                className="px-4 py-2 bg-red-100 text-red-700 rounded-full hover:bg-red-200 font-semibold transition-all"
               >
                 Log Out
               </button>
             </>
           ) : (
             <>
-              <Link to="/Bible-story" className="hover:underline">
+              <Link
+                to="/Bible-story"
+                className="px-4 py-2 bg-white text-amber-600 rounded-full hover:bg-yellow-100 font-semibold transition-all"
+              >
                 Bible Story
               </Link>
               <Link
                 to="/signin"
-                className="border-2 px-3 py-1 rounded-lg bg-white text-amber-900 hover:bg-gray-300"
+                className="px-4 py-2 bg-white text-amber-600 rounded-full hover:bg-yellow-100 font-semibold transition-all"
               >
                 Sign In
               </Link>
               <Link
                 to="/register"
-                className="border-2 px-3 py-1 rounded-lg bg-white text-amber-900 hover:bg-gray-300"
+                className="px-4 py-2 bg-white text-amber-600 rounded-full hover:bg-yellow-100 font-semibold transition-all"
               >
                 Register
+              </Link>
+              <Link
+                to="/help"
+                className="px-4 py-2 bg-black text-white rounded-full hover:bg-yellow-100 font-semibold transition-all"
+              >
+                Help
               </Link>
             </>
           )}

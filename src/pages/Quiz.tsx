@@ -3,7 +3,8 @@ import mosesQuizData from "../data/MosesQuiz.json";
 import ResultDetails from "../components/ResultDetails";
 import axios from "axios";
 import { baseUrl } from "../api/BaseUrls";
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid";
+import { useNavigate } from "react-router-dom";
 
 type QuizItem = {
   question: string;
@@ -20,13 +21,16 @@ const Quiz = () => {
     return shuffled.slice(0, count).map((q) => ({ ...q, userAnswer: "" }));
   };
 
-  const [quizState, setQuizState] = useState<QuizItem[]>(() => getRandomQuestions(20));
+  const [quizState, setQuizState] = useState<QuizItem[]>(() =>
+    getRandomQuestions(20)
+  );
   const [message, setMessage] = useState("");
   const [completed, setCompleted] = useState<boolean>(false);
   const [quizScore, setQuizScore] = useState<number>(0);
   const [quizDate, setQuizDate] = useState<string>("");
   const [isReady, setIsReady] = useState<boolean>(false);
   const [timer, setTimer] = useState<number>(900); // 15 minutes in seconds (900 seconds)
+  const navigate = useNavigate();
 
   //@ts-ignore
   const [intervalId, setIntervalId] = useState<NodeJS.Timeout | null>(null); // To store the interval ID
@@ -37,6 +41,11 @@ const Quiz = () => {
     const updatedQuiz = [...quizState];
     updatedQuiz[questionIndex].userAnswer = selected;
     setQuizState(updatedQuiz);
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("username");
+    navigate("/");
   };
 
   const handleSubmit = async () => {
@@ -85,7 +94,9 @@ const Quiz = () => {
           console.error("Error submitting quiz results:", error);
         }
       } else {
-        setMessage(data.message || "Something went wrong submitting your quiz.");
+        setMessage(
+          data.message || "Something went wrong submitting your quiz."
+        );
       }
     } catch (error) {
       console.error("Submit error:", error);
@@ -115,7 +126,10 @@ const Quiz = () => {
   const formatTime = (time: number) => {
     const minutes = Math.floor(time / 60);
     const seconds = time % 60;
-    return `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+    return `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(
+      2,
+      "0"
+    )}`;
   };
 
   return (
@@ -130,18 +144,23 @@ const Quiz = () => {
         />
       ) : (
         <div>
-         <h1 className="text-4xl md:text-5xl font-extrabold text-purple-700 mb-4 drop-shadow-md text-center">
-  🧠 Bible Quiz Time!
-</h1>
-<p className="text-lg md:text-2xl mx-6 md:mx-24 text-gray-700 text-center mb-8">
-  🎉 Hi{" "}
-  <span className="text-purple-700 text-4xl font-bold">{username?.toUpperCase()}</span>,<br />
-  Let’s have some fun while learning about the Bible! Answer each question and see how many you get right! 🌟
-</p>
-<p className="text-lg md:text-2xl mx-6 md:mx-24 text-gray-700 text-center mb-8">
-  Here you can track your quiz results.
-</p>
-
+          <div className="sticky top-0 z-50 bg-white mt-10 py-4 shadow-md">
+            <h1 className="text-4xl md:text-5xl font-extrabold text-purple-700 mb-4 drop-shadow-md text-center">
+              🧠 Bible Quiz Time!
+            </h1>
+            <p className="text-lg md:text-2xl mx-6 md:mx-24 text-gray-700 text-center mb-8">
+              🎉 Hi{" "}
+              <span className="text-purple-700 text-4xl font-bold">
+                {username?.toUpperCase()}
+              </span>
+              ,<br />
+              Let’s have some fun while learning about the Bible! Answer each
+              question and see how many you get right! 🌟
+            </p>
+            <p className="text-lg md:text-2xl mx-6 md:mx-24 text-gray-700 text-center mb-4">
+              Here you can track your quiz results.
+            </p>
+          </div>
 
           {/* Prompt to ask if the student is ready to take the quiz */}
           {!isReady && (
@@ -158,11 +177,11 @@ const Quiz = () => {
                   Yes
                 </button>
                 <button
-                  onClick={() => handleReadyToStart(false)}
-                  className="bg-red-500 text-white py-2 px-4 rounded-xl hover:bg-red-600 transition duration-300"
+                onClick={handleLogout}
+                className="bg-red-500 text-white py-2 px-4 rounded-xl hover:bg-green-600 transition duration-300"
                 >
-                  No
-                </button>
+               No
+              </button>
               </div>
 
               <p className="text-lg font-semibold text-gray-700 text-center mt-6">
@@ -173,15 +192,14 @@ const Quiz = () => {
             </div>
           )}
 
-
-
           {/* Show the quiz container only if the student is ready */}
           {isReady && (
             <div className="min-h-screen bg-gradient-to-br from-yellow-100 to-pink-100 flex flex-col items-center px-4 py-10">
-
-               {/* Timer display */}
-          <div className="sticky top-21 z-50 text-end mr-16 items-end font-bold text-2xl text-blue-900
-          ">
+              {/* Timer display */}
+              <div
+                className="sticky text-2xl top-64 z-50 mr-16 items-end font-bold text-red-600
+          "
+              >
                 Time Remaining: {formatTime(timer)}
               </div>
               {quizState.map((item, index) => (

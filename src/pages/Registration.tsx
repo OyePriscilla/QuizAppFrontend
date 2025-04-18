@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { baseUrl } from "../api/BaseUrls";
+import { Eye, EyeOff } from "lucide-react";
 
 const Registration = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
+
+  const togglePassword = () => setShowPassword(!showPassword);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -18,19 +22,15 @@ const Registration = () => {
 
     // Send data to the backend using Axios
     try {
-      const response = await axios.post(
-        `${baseUrl}/api/auth/signup`,
-        {
-          username,
-          password,
-        }
-      );
+      const response = await axios.post(`${baseUrl}/api/auth/signup`, {
+        username,
+        password,
+      });
 
       // Handle the response from the backend
       if (response.data.message) {
         setMessage(response.data.message);
         localStorage.setItem("username", username);
-
 
         // Show success message
       } else {
@@ -48,7 +48,11 @@ const Registration = () => {
           Create Your Account
         </h2>
 
-        {message && <p className="text-center text-red-500 mb-4 font-bold">⚡⚡{message}⚡⚡</p>}
+        {message && (
+          <p className="text-center text-red-500 mb-4 font-bold">
+            ⚡⚡{message}⚡⚡
+          </p>
+        )}
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
@@ -56,7 +60,7 @@ const Registration = () => {
               htmlFor="username"
               className="block text-lg font-medium text-blue-700"
             >
-              Username
+              Username <span className="text-red-500">(At least six(6) letters)</span>
             </label>
             <input
               type="text"
@@ -65,6 +69,7 @@ const Registration = () => {
               onChange={(e) => setUsername(e.target.value)}
               className="mt-2 p-3 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
               placeholder="Enter your username"
+              minLength={6}
             />
           </div>
 
@@ -73,16 +78,24 @@ const Registration = () => {
               htmlFor="password"
               className="block text-lg font-medium text-blue-700"
             >
-              Password
+              Password <span className="text-red-500">(At least six(6) letters)</span>
             </label>
             <input
-              type="password"
+              type={showPassword ? "text" : "password"}
               id="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="mt-2 p-3 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
               placeholder="Enter your password"
-            />
+              minLength={6}
+              />
+              <button
+              type="button"
+              onClick={togglePassword}
+              className="absolute top-110 right-15 inset-y-0 flex items-center text-blue-600 hover:text-purple-600"
+            >
+              {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+            </button>
           </div>
 
           <button

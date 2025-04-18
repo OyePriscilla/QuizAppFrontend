@@ -1,10 +1,18 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { baseUrl } from "../api/BaseUrls";
+import { Eye, EyeOff } from "lucide-react";
+
+
+
+
 const SignIn = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
+
+  const togglePassword = () => setShowPassword(!showPassword);
 
   const navigate = useNavigate();
 
@@ -81,13 +89,21 @@ const SignIn = () => {
               Password
             </label>
             <input
-              type="password"
+              type={showPassword ? "text" : "password"}
               id="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="mt-2 p-3 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
               placeholder="Enter your password"
-            />
+              minLength={6}
+              />
+              <button
+              type="button"
+              onClick={togglePassword}
+              className="absolute top-110 right-15 inset-y-0 flex items-center text-blue-600 hover:text-purple-600"
+            >
+              {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+            </button>
           </div>
 
           <button
