@@ -50,17 +50,17 @@ const Home = () => {
       </p>
 
       <div className="flex flex-col sm:flex-row gap-5 mb-12">
+      <Link
+          to="/Bible-story"
+          className="bg-pink-400 text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-pink-500 transition duration-300 shadow-lg"
+        >
+          📚 Read About the Moses
+        </Link>
         <Link
           to="/signin"
           className="bg-purple-600 text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-purple-700 transition duration-300 shadow-lg"
         >
           🚀 Start Quiz
-        </Link>
-        <Link
-          to="/Bible-story"
-          className="bg-pink-400 text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-pink-500 transition duration-300 shadow-lg"
-        >
-          📚 Read About the Moses
         </Link>
       </div>
 
