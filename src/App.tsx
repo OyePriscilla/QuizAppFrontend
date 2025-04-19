@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { NavBar } from "../types";
 
@@ -25,6 +26,12 @@ const NavBars: NavBar[] = [
 ];
 
 function App() {
+
+
+useEffect(() => {
+  document.title = "Bible Story Time - Inspiration Time";
+}, []);
+
   const location = useLocation();
   const hideNavBar = location.pathname === "/quiz";
   return (
