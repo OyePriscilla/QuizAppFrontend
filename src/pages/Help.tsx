@@ -17,7 +17,7 @@ const Help = () => {
             </h2>
             <p className="text-gray-700 text-lg">
               Before accessing the quiz, you need to <span className="font-semibold">register</span>.
-              Use a username that looks like an email (e.g., <span className="font-semibold text-blue-600">something@gmail.com</span>).
+              Use a username that looks like an email (e.g., <span className="font-semibold text-blue-600">marvin@gmail.com</span>).
               <br />
               <span className="text-red-600 font-semibold">
                 It does NOT have to be a real or working email address.
