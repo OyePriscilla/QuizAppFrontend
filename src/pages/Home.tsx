@@ -40,7 +40,7 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-yellow-50 flex flex-col items-center justify-center px-4 py-12 text-center">
       <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-pink-600 mb-4 drop-shadow-md">
-        ✨ Welcome to Bible Quiz for Kids! ✨
+        ✨ Welcome to Bible Quiz!!! ✨
       </h1>
 
       <p className="text-lg md:text-xl text-gray-800 max-w-2xl mb-10 leading-relaxed font-medium">

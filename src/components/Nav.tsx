@@ -22,7 +22,7 @@ const Nav = () => {
       <div className="w-full max-w-7xl mx-auto px-4 py-4 font-serif font-bold flex flex-col sm:flex-row items-center justify-between">
         {/* Logo or Title */}
         <h1 className="text-3xl sm:text-4xl font-extrabold text-white drop-shadow-md mb-4 sm:mb-0">
-          Inspiration Time 📖
+          Inspire 📖
         </h1>
 
         {/* Navigation Links */}
