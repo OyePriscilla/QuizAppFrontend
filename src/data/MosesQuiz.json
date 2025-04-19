@@ -73,7 +73,7 @@
     "question": "Why did Moses flee Egypt?",
     "options": [
       "He was sent away",
-      "He was afraid of Pharaoh",
+      "He was loved Pharaoh",
       "He killed an Egyptian",
       "He got lost"
     ],
@@ -119,17 +119,7 @@
     ],
     "answer": "Eliezer"
   },
-  {
-    "question": "What did Moses see on Mount Horeb?",
-    "options": [
-      "A giant stone",
-      "A golden calf",
-      "A burning bush",
-      "An angel"
-    ],
-    "answer": "A burning bush"
-  },
-  {
+    {
     "question": "What did God say from the burning bush?",
     "options": [
       "You are chosen!",
@@ -142,7 +132,7 @@
   {
     "question": "What excuse did Moses give for not going to Egypt?",
     "options": [
-      "I\u2019m afraid",
+      "I\u2019m well educated",
       "I am too old",
       "I don\u2019t believe",
       "I can\u2019t speak well"
@@ -159,26 +149,8 @@
     ],
     "answer": "A snake"
   },
-  {
-    "question": "What disease appeared and healed on Moses\u2019 hand?",
-    "options": [
-      "Spots",
-      "Leprosy",
-      "Blisters",
-      "Boils"
-    ],
-    "answer": "Leprosy"
-  },
-  {
-    "question": "What did Moses' water turn into?",
-    "options": [
-      "Honey",
-      "Blood",
-      "Oil",
-      "Milk"
-    ],
-    "answer": "Blood"
-  },
+
+
   {
     "question": "Who was Moses\u2019 brother?",
     "options": [
@@ -224,8 +196,8 @@
     "options": [
       "Mount Sinai",
       "Mount Zion",
-      "Mount Ararat",
-      "Mount Carmel"
+      "Mount Egypt",
+      "Mount Churcu"
     ],
     "answer": "Mount Sinai"
   },
@@ -239,36 +211,9 @@
     ],
     "answer": "Ten Commandments"
   },
-  {
-    "question": "What did the Israelites build to worship wrongly?",
-    "options": [
-      "A silver dove",
-      "A stone idol",
-      "A bronze serpent",
-      "A golden calf"
-    ],
-    "answer": "A golden calf"
-  },
-  {
-    "question": "What did Moses do to the tablets when he saw the idol?",
-    "options": [
-      "He broke them",
-      "He gave them to Aaron",
-      "He lost them",
-      "He hid them"
-    ],
-    "answer": "He broke them"
-  },
-  {
-    "question": "Who spoke to Moses face to face?",
-    "options": [
-      "God",
-      "Aaron",
-      "A prophet",
-      "An angel"
-    ],
-    "answer": "God"
-  },
+
+
+
   {
     "question": "What did God feed the Israelites in the desert?",
     "options": [
@@ -279,36 +224,7 @@
     ],
     "answer": "Manna"
   },
-  {
-    "question": "How did God lead the Israelites by day?",
-    "options": [
-      "Sunlight",
-      "Torch",
-      "Pillar of cloud",
-      "Wind"
-    ],
-    "answer": "Pillar of cloud"
-  },
-  {
-    "question": "How did God lead the Israelites by night?",
-    "options": [
-      "Moonlight",
-      "Stars",
-      "Pillar of fire",
-      "Lamps"
-    ],
-    "answer": "Pillar of fire"
-  },
-  {
-    "question": "What did Moses strike to get water?",
-    "options": [
-      "A mountain",
-      "A wall",
-      "A tree",
-      "A rock"
-    ],
-    "answer": "A rock"
-  },
+
   {
     "question": "How many plagues did God send on Egypt?",
     "options": [
@@ -319,16 +235,7 @@
     ],
     "answer": "10"
   },
-  {
-    "question": "What was the final plague?",
-    "options": [
-      "Frogs",
-      "Darkness",
-      "Death of the firstborn",
-      "Flies"
-    ],
-    "answer": "Death of the firstborn"
-  },
+
   {
     "question": "What animal\u2019s blood saved the Israelites?",
     "options": [
@@ -349,16 +256,7 @@
     ],
     "answer": "Joshua"
   },
-  {
-    "question": "Where did Moses die?",
-    "options": [
-      "Mount Carmel",
-      "Mount Nebo",
-      "Mount Sinai",
-      "Mount Horeb"
-    ],
-    "answer": "Mount Nebo"
-  },
+
   {
     "question": "How old was Moses when he died?",
     "options": [
@@ -369,16 +267,7 @@
     ],
     "answer": "120"
   },
-  {
-    "question": "Who buried Moses?",
-    "options": [
-      "The elders",
-      "Joshua",
-      "God",
-      "Aaron"
-    ],
-    "answer": "God"
-  },
+ 
   {
     "question": "What was Moses\u2019 father\u2019s name?",
     "options": [
