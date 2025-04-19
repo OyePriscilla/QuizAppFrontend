@@ -1,5 +1,3 @@
-import React from "react";
-
 const Help = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-100 via-pink-100 to-yellow-100 py-10 px-6 md:px-24 font-sans">
