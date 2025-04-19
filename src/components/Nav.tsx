@@ -72,7 +72,7 @@ const Nav = () => {
               </Link>
               <Link
                 to="/help"
-                className="px-4 py-2 bg-black text-white rounded-full hover:bg-yellow-100 font-semibold transition-all"
+                className="px-4 py-2 bg-black text-white rounded-full hover:bg-yellow-100 hover:text-black font-semibold transition-all"
               >
                 Help
               </Link>

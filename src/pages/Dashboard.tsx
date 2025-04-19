@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { baseUrl } from "../api/BaseUrls";
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { db } from "../firebase";
+import { Timestamp } from "firebase/firestore"; // Import Timestamp
 
 type QuizItem = {
   question: string;
@@ -11,17 +12,17 @@ type QuizItem = {
 };
 
 type QuizResult = {
-  id:string,
+  id: string;
   username: string;
   score: number;
-  date: string;
+  timestamp: Timestamp; // Ensure it's a Timestamp
   quizState: QuizItem[];
 };
 
 const Dashboard = () => {
   const [quizResults, setQuizResults] = useState<QuizResult[]>([]);
   const [error, setError] = useState<string>("");
-  const [showResult, setShowResult] = useState<number | null>(null); // Track the clicked quiz index
+  const [showResult, setShowResult] = useState<number | null>(null);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -32,11 +33,27 @@ const Dashboard = () => {
     } else {
       const fetchQuizResults = async () => {
         try {
-          const response = await axios.get(
-            `${baseUrl}/api/dashboard/${username}`
+          const q = query(
+            collection(db, "quizResults"),
+            where("username", "==", username)
           );
-          setQuizResults(response.data);
+          const querySnapshot = await getDocs(q);
+          const results: QuizResult[] = [];
+          querySnapshot.forEach((doc) => {
+            const data = doc.data() as Omit<QuizResult, "id">;
+            const timestamp = data.timestamp instanceof Timestamp ? data.timestamp : null;
+            //@ts-ignore
+            results.push({ id: doc.id, ...data, timestamp: timestamp });
+          });
+
+          // Log the fetched results
+          console.log('Fetched Results:', results);
+
+          // Sort by latest first (assuming `timestamp` is available)
+          results.sort((a, b) => (b.timestamp?.seconds ?? 0) - (a.timestamp?.seconds ?? 0));
+          setQuizResults(results);
         } catch (error) {
+          console.error(error);
           setError("Error fetching quiz results");
         }
       };
@@ -45,8 +62,9 @@ const Dashboard = () => {
     }
   }, [navigate]);
 
+
   const handleShowDetails = (index: number) => {
-    setShowResult(showResult === index ? null : index); // Toggle quiz details visibility
+    setShowResult(showResult === index ? null : index);
   };
 
   return (
@@ -54,10 +72,10 @@ const Dashboard = () => {
       <h1 className="text-3xl font-bold text-center mb-6">User Dashboard</h1>
       {error && <p className="text-red-500 text-center">{error}</p>}
 
-      {quizResults && quizResults.length > 0 ? (
+      {quizResults.length > 0 ? (
         <div className="space-y-6">
           {quizResults.map((result, index) => (
-            <div key={index}>
+            <div key={result.id}>
               <div
                 onClick={() => handleShowDetails(index)}
                 className="sticky top-0 bg-white p-6 rounded-lg shadow-lg border-2 border-gray-300 cursor-pointer transform hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-in-out"
@@ -67,7 +85,7 @@ const Dashboard = () => {
                     Quiz #{index + 1} - {result.username}
                   </h3>
                   <p className="text-lg font-semibold text-gray-500">
-                    {new Date(result.date).toLocaleString()}
+                    {result.timestamp ? result.timestamp.toDate().toLocaleString() : "No Date"}
                   </p>
                 </div>
 

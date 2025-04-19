@@ -1,131 +1,117 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { baseUrl } from "../api/BaseUrls";
-import { Eye, EyeOff } from "lucide-react";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { db, auth } from "../firebase"; // assuming firebase.js exports auth and db
+import { doc, getDoc, setDoc } from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { FaEye, FaEyeSlash } from "react-icons/fa"; // Importing icons for password toggle
 
-
-
-
-const SignIn = () => {
-  const [showPassword, setShowPassword] = useState(false);
-
-  const togglePassword = () => setShowPassword(!showPassword);
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [message, setMessage] = useState("");
-
+const Login = () => {
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
+  const [showPassword, setShowPassword] = useState<boolean>(false); // State to toggle password visibility
   const navigate = useNavigate();
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Simple validation
-    if (!username || !password) {
-      setMessage("Please fill out all fields!");
-      return;
-    }
-
-    // Send data to the backend using Axios
     try {
-      const response = await fetch(`${baseUrl}/api/auth/login`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ username, password }),
-      });
+      // Sign in with Firebase Authentication
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
 
-      const data = await response.json();
+      // Set a message indicating login success
+      setMessage("Login successful!");
 
-      if (response.ok && data.message === "Login successful") {
-        setMessage(data.message);
+      // Fetch username from Firestore (if required)
+      const userRef = doc(db, "users", user.uid); // assuming the user collection is in Firestore under 'users'
+      const userSnapshot = await getDoc(userRef);
 
-        // Optionally save userId in localStorage
-        localStorage.setItem("username", username);
+      let username = user.email; // Default to email if username doesn't exist
 
-        // Redirect to dashboard or quiz page
-        navigate("/quiz"); // Change to your desired route
-      } else {
-        setMessage(data.message || "Login failed. Please try again.");
+      if (userSnapshot.exists()) {
+        // Check if the username is stored in Firestore
+        const userData = userSnapshot.data();
+        if (userData && userData.username) {
+          username = userData.username; // Use stored username from Firestore if it exists
+        }
       }
+
+      // Store the username in localStorage (or in state if needed)
+      // @ts-ignore
+      localStorage.setItem("username", username);
+
+      // Optionally: Save/update the username in Firestore (if it's not set yet)
+      if (!userSnapshot.exists()) {
+        await setDoc(userRef, { username: user.email }, { merge: true });
+      }
+
+      // Redirect to a different page (e.g., quiz page)
+      navigate("/quiz");
+
     } catch (error) {
-      console.error("Login error:", error);
-      setMessage("Something went wrong. Please try again.");
+      console.error(error);
+      setMessage("Login failed. Please check your credentials.");
     }
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-blue-50">
-      <div className="p-6 bg-white rounded-lg shadow-lg w-80">
-        <h2 className="text-4xl font-bold text-center text-blue-500 mb-4">
-          Log in
-        </h2>
-
-        {message && <p className="text-center text-red-500 mb-4">{message}</p>}
-
-        <form onSubmit={handleSubmit} className="space-y-4">
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-indigo-600 to-purple-600">
+      <div className="w-full max-w-md p-8 bg-white rounded-lg shadow-xl">
+        <h1 className="text-3xl font-bold text-center text-gray-700 mb-8">Login</h1>
+        <form onSubmit={handleLogin} className="space-y-6">
           <div>
-            <label
-              htmlFor="username"
-              className="block text-lg font-medium text-blue-700"
-            >
-              Username
-            </label>
             <input
-              type="text"
-              id="username"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              className="mt-2 p-3 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-              placeholder="Enter your username"
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="w-full p-4 border-2 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required
             />
           </div>
 
-          <div>
-            <label
-              htmlFor="password"
-              className="block text-lg font-medium text-blue-700"
-            >
-              Password
-            </label>
+          <div className="relative">
             <input
               type={showPassword ? "text" : "password"}
-              id="password"
+              placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="mt-2 p-3 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-              placeholder="Enter your password"
-              minLength={6}
-              />
-              <button
-              type="button"
-              onClick={togglePassword}
-              className="absolute top-105 right-15 inset-y-0 flex items-center text-blue-600 hover:text-purple-600"
+              className="w-full p-4 border-2 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required
+            />
+            <div
+              onClick={() => setShowPassword(!showPassword)}
+              className="absolute top-1/2 right-3 transform -translate-y-1/2 cursor-pointer"
             >
-              {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
-            </button>
+              {showPassword ? <FaEyeSlash size={20} /> : <FaEye size={20} />}
+            </div>
           </div>
 
           <button
             type="submit"
-            className="w-full p-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
           >
-            Log in
+            Login
           </button>
         </form>
 
-        <p className="text-center text-sm mt-4">
+        {message && (
+          <p className="text-center text-lg mt-4 text-green-600">{message}</p>
+        )}
+
+        <p className="text-center text-gray-600 mt-4">
           Don't have an account?{" "}
-          <Link
-            to="/register"
-            className=" text-amber-600  hover:bg-yellow-100 font-semibold transition-all"
+          <span
+            onClick={() => navigate("/register")}
+            className="text-blue-500 cursor-pointer hover:text-blue-700 transition-colors"
           >
             Register here
-          </Link>
+          </span>
         </p>
       </div>
     </div>
   );
 };
 
-export default SignIn;
+export default Login;
