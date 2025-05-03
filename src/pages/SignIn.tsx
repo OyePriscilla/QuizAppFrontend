@@ -14,51 +14,51 @@ const Login = () => {
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-
     try {
-      // Sign in with Firebase Authentication
-      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
       const user = userCredential.user;
 
-      // Set a message indicating login success
-      setMessage("Login successful!");
-
-      // Fetch username from Firestore (if required)
-      const userRef = doc(db, "users", user.uid); // assuming the user collection is in Firestore under 'users'
+      const userRef = doc(db, "users", user.uid);
       const userSnapshot = await getDoc(userRef);
 
-      let username = user.email; // Default to email if username doesn't exist
+      let username = user.email;
 
       if (userSnapshot.exists()) {
-        // Check if the username is stored in Firestore
         const userData = userSnapshot.data();
         if (userData && userData.username) {
-          username = userData.username; // Use stored username from Firestore if it exists
+          username = userData.username;
         }
       }
-
-      // Store the username in localStorage (or in state if needed)
-      // @ts-ignore
+//@ts-ignore
       localStorage.setItem("username", username);
 
-      // Optionally: Save/update the username in Firestore (if it's not set yet)
       if (!userSnapshot.exists()) {
         await setDoc(userRef, { username: user.email }, { merge: true });
       }
 
-      // Redirect to a different page (e.g., quiz page)
-      navigate("/quiz");
+      setMessage("Login successful!");
+      console.log("Login successful — navigating...");
+
+      // Delay navigation slightly to ensure DOM updates
+        navigate("/selectquiz");
 
     } catch (error) {
-      console.error(error);
+      console.error("Login error:", error);
       setMessage("Login failed. Please check your credentials.");
     }
-  };
+  }
 
-  return (
+
+ return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-indigo-600 to-purple-600">
       <div className="w-full max-w-md p-8 bg-white rounded-lg shadow-xl">
-        <h1 className="text-3xl font-bold text-center text-gray-700 mb-8">Login</h1>
+        <h1 className="text-3xl font-bold text-center text-gray-700 mb-8">
+          Login
+        </h1>
         <form onSubmit={handleLogin} className="space-y-6">
           <div>
             <input
@@ -112,6 +112,7 @@ const Login = () => {
       </div>
     </div>
   );
+
 };
 
 export default Login;

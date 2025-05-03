@@ -1,22 +1,112 @@
-import React from 'react';
+import React, { useState } from "react";
 
 const BibleStory: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-100 via-purple-100 to-blue-100 p-6">
-      <h1 className="text-3xl font-bold text-center text-purple-700 mb-8">Bible Story Time: Inspiration Time</h1>
-      <h2 className="text-3xl font-bold text-center text-purple-700 mb-8">📘 The Story of Moses</h2>
+  const [selectedCharacter, setSelectedCharacter] = useState("Moses");
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
-      <div className="space-y-8 max-w-4xl mx-auto">
-        {sections.map((section, index) => (
-          <div
-            key={index}
-            className="bg-white rounded-2xl shadow-lg p-6 border-l-8 border-pink-300 hover:scale-[1.01] transition-all duration-300"
-          >
-            <h2 className="text-3xl font-chewy text-purple-800 mb-4">{section.title}</h2>
-            <p className="text-base font-nunito text-gray-800 leading-relaxed">{section.scripture}</p>
-            <p className="text-purple-900 font-nunito whitespace-pre-line leading-relaxed">{section.content}</p>
-          </div>
-        ))}
+  const currentStory = stories.find(
+    (story) => story.name === selectedCharacter
+  );
+
+  return (
+    <div className="min-h-screen flex bg-gradient-to-br from-pink-100 via-purple-100 to-blue-100">
+      {/* Sidebar for larger screens */}
+      <aside
+        className={`w-64 bg-white shadow-md p-6 hidden md:block ${
+          sidebarOpen ? "block" : "hidden"
+        }`}
+      >
+        <h2 className="text-2xl font-bold text-purple-700 mb-6 text-center">
+          Bible Characters
+        </h2>
+        <ul className="space-y-4">
+          {characters.map((character) => (
+            <li key={character.name}>
+              <button
+                className={`w-full text-left px-4 py-2 rounded-lg hover:bg-purple-200 transition ${
+                  selectedCharacter === character.name
+                    ? "bg-purple-300 font-bold"
+                    : ""
+                }`}
+                onClick={() => setSelectedCharacter(character.name)}
+              >
+                {character.name}
+              </button>
+            </li>
+          ))}
+        </ul>
+      </aside>
+
+      {/* Mobile Sidebar Button */}
+      <button
+        className="md:hidden p-4 bg-purple-700 text-white fixed top-4 left-4 z-10 rounded-full shadow-lg"
+        onClick={() => setSidebarOpen(!sidebarOpen)}
+      >
+        ☰
+      </button>
+
+      {/* Main Content */}
+      <main className="flex-1 p-6">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-3xl font-bold text-center text-purple-700 mb-6">
+            📖 {selectedCharacter}'s Story
+          </h1>
+
+          {/* Show Story if Available */}
+          {currentStory ? (
+            <div className="space-y-8">
+              {currentStory.sections.map((section, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-2xl shadow-lg p-6 border-l-8 border-pink-300 hover:scale-[1.01] transition-all duration-300"
+                >
+                  <h2 className="text-2xl font-bold text-purple-800 mb-2">
+                    {section.title}
+                  </h2>
+                  {section.scripture && (
+                    <p className="text-sm text-gray-500 mb-2">
+                      {section.scripture}
+                    </p>
+                  )}
+                  <p className="text-gray-800 whitespace-pre-line leading-relaxed">
+                    {section.content}
+                  </p>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="text-center text-gray-600 mt-20">
+              <p>Story for {selectedCharacter} is coming soon! 🚀</p>
+            </div>
+          )}
+        </div>
+      </main>
+
+      {/* Sidebar for mobile screens */}
+      <div
+        className={`fixed top-0 left-0 h-full bg-white shadow-md p-6 w-64 z-20 transition-transform transform ${
+          sidebarOpen ? "translate-x-0" : "-translate-x-full"
+        } md:hidden`}
+      >
+        <h2 className="text-2xl font-bold text-purple-700 mb-6 text-center">
+          Bible Characters
+        </h2>
+        <ul className="space-y-4">
+          {characters.map((character) => (
+            <li key={character.name}>
+              <button
+                className={`w-full text-left px-4 py-2 rounded-lg hover:bg-purple-200 transition ${
+                  selectedCharacter === character.name
+                    ? "bg-purple-300 font-bold"
+                    : ""
+                }`}
+                onClick={() => setSelectedCharacter(character.name)}
+              >
+                {character.name}
+              </button>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );
@@ -24,77 +114,198 @@ const BibleStory: React.FC = () => {
 
 export default BibleStory;
 
-const sections = [
+// Sidebar character list
+const characters = [
+  { name: "Moses" },
+  { name: "Joseph" },
+  { name: "Adam" },
+  { name: "Abraham" },
+  { name: "David" },
+  { name: "Noah" },
+  { name: "Peter" },
+  { name: "Paul" },
+];
+
+// Stories data
+const stories = [
   {
-    title: '🧺👶 The Baby in the Basket',
-    scripture: '📖 Exodus 1–2',
-    content: `A long time ago, in Egypt, the king (called Pharaoh) saw that the Israelites were growing in number. He got scared and made them slaves 😢. He ordered that all baby boys born to Israelites should be killed 😱.
-
-But a brave woman named Jochebed had a baby boy and knew he was special. She hid him for 3 months 👶. When she couldn’t hide him anymore, she put him in a waterproof basket and gently placed it on the river Nile 🌊.
-
-📍The baby’s big sister, Miriam, watched nearby as the basket floated. Pharaoh’s daughter came to the river, saw the basket, and took pity on the crying baby 💗. She decided to raise him as her own—and named him Moses, which means “drawn out of water.”`,
+    name: "Moses",
+    sections: [
+      {
+        title: "🧺👶 The Baby in the Basket",
+        scripture: "📖 Exodus 1–2",
+        content: `A long time ago, in Egypt, the king (called Pharaoh) saw that the Israelites were growing...`,
+      },
+      {
+        title: "🏰👦 Moses Grows Up in the Palace",
+        scripture: "📖 Exodus 2:10–15",
+        content: `Moses grew up in Pharaoh’s palace like a prince 👑! ...`,
+      },
+      {
+        title: "🏞️🌸 A New Life in Midian",
+        scripture: "📖 Exodus 2:16–25",
+        content: `In Midian, Moses sat by a well 💧...`,
+      },
+      {
+        title: "🔥🌳 The Burning Bush",
+        scripture: "📖 Exodus 3–4",
+        content: `One day, while watching sheep on Mount Horeb ⛰️, Moses saw a bush on fire...`,
+      },
+      {
+        title: "🛤️🏙️ Back to Egypt",
+        scripture: "📖 Exodus 4:18–31",
+        content: `Moses took his wife and sons and began the journey back to Egypt...`,
+      },
+      {
+        title: "💬 Moses' Special Encounters with God",
+        scripture: "",
+        content: `Throughout his life, Moses had many amazing moments with God...`,
+      },
+      {
+        title: "❤️ A Message for Children",
+        scripture: "",
+        content: `Moses didn’t feel brave or special—but God chose him anyway...`,
+      },
+    ],
   },
   {
-    title: '🏰👦 Moses Grows Up in the Palace',
-    scripture: '📖 Exodus 2:10–15',
-    content: `Moses grew up in Pharaoh’s palace like a prince 👑! But he never forgot that he was an Israelite. One day, he saw an Egyptian hurting an Israelite slave 😠. Moses got angry and defended the man, but he ended up killing the Egyptian.
-
-When Pharaoh found out, Moses got scared 😨 and ran away to the land of Midian.`,
+    name: "Joseph",
+    sections: [
+      {
+        title: "👶🎨 The Favorite Son with the Colorful Coat",
+        scripture: "📖 Genesis 37:1–4",
+        content: `Joseph was the son of Jacob and Rachel ❤️. He was Jacob’s favorite child, and to show his love, Jacob gave Joseph a beautiful coat of many colors 🌈. This made his brothers very jealous 😠.`,
+      },
+      {
+        title: "🌾💤 Dreams and Jealousy",
+        scripture: "📖 Genesis 37:5–11",
+        content: `Joseph had special dreams 🛌 where his brothers’ bundles of grain bowed to his, and stars bowed to him too ⭐. His brothers didn’t like that and thought he was bragging 😤.`,
+      },
+      {
+        title: "😠🕳️ Trouble in the Field",
+        scripture: "📖 Genesis 37:12–28",
+        content: `One day, Jacob sent Joseph to check on his brothers. They planned to hurt him 😟. Reuben said, “Let’s not kill him—let’s throw him in a pit!” 🕳️ Later, they sold him for 20 pieces of silver 💰 to travelers going to Egypt.`,
+      },
+      {
+        title: "👕🐐 The Bloody Coat Trick",
+        scripture: "📖 Genesis 37:29–35",
+        content: `The brothers dipped Joseph’s colorful coat in goat’s blood 🐐 and told their father that Joseph had been killed 😢. Jacob was heartbroken 💔.`,
+      },
+      {
+        title: "🏠💼 Joseph in Potiphar’s House",
+        scripture: "📖 Genesis 39:1–6",
+        content: `In Egypt, Joseph was sold to a man named Potiphar 🏛️. Joseph worked hard and became the overseer of Potiphar’s house 🧹. God was with him and helped him succeed 🙏.`,
+      },
+      {
+        title: "🚪😳 Trouble with Potiphar’s Wife",
+        scripture: "📖 Genesis 39:7–20",
+        content: `Potiphar’s wife lied about Joseph 😢. Even though he ran away from trouble 🚪💨, she said he did something wrong. Potiphar believed her and threw Joseph in prison 🚔.`,
+      },
+      {
+        title: "⛓️🍞 Dreams in Jail",
+        scripture: "📖 Genesis 40",
+        content: `In prison, Joseph met Pharaoh’s baker and cupbearer 🥖🍷. They had dreams, and Joseph told them what their dreams meant 😮. His words came true—but the cupbearer forgot about Joseph! 🙁`,
+      },
+      {
+        title: "🐄🌾 Pharaoh’s Strange Dreams",
+        scripture: "📖 Genesis 41:1–36",
+        content: `Two years later, Pharaoh had strange dreams about skinny cows and fat cows 🐄, and thin grain swallowing fat grain 🌾. Joseph was called to explain them. He said the dreams meant seven years of plenty would come, followed by seven years of famine 🍽️.`,
+      },
+      {
+        title: "👑💍 From Prisoner to Prince",
+        scripture: "📖 Genesis 41:37–57",
+        content: `Pharaoh was amazed 😲 and made Joseph the second most powerful man in Egypt! He gave Joseph a royal ring 💍, a new name—Zaphenath-Paneah 📛—and a wife named Asenath 💕. Joseph stored up grain to prepare for the famine.`,
+      },
+      {
+        title: "🌍🌽 Visitors from Canaan",
+        scripture: "📖 Genesis 42–43",
+        content: `When the famine came, Joseph’s brothers came to Egypt to buy food 🍞. They didn’t recognize Joseph, but he knew who they were 😮. He tested them and kept Simeon as a hostage 🔐, asking them to bring Benjamin.`,
+      },
+      {
+        title: "💔🍽️ The Silver Cup Trick",
+        scripture: "📖 Genesis 44",
+        content: `The brothers returned with Benjamin. But Joseph placed his silver cup 🏆 in Benjamin’s sack! Then he accused them of stealing 😲. Judah offered to take Benjamin’s place 💖.`,
+      },
+      {
+        title: "😭🤗 The Big Reveal",
+        scripture: "📖 Genesis 45",
+        content: `Joseph couldn’t hide it anymore—he told them who he really was 😭. “I am Joseph!” he cried. His brothers were shocked 😯, but Joseph forgave them and said, “God used it all for good” 🙏.`,
+      },
+      {
+        title: "🏡👨‍👩‍👦 Family Reunited in Goshen",
+        scripture: "📖 Genesis 46–47",
+        content: `Joseph brought his whole family to Egypt. They lived in a land called Goshen 🌾. Jacob was so happy to see his son again. Joseph kept them safe and fed during the famine ❤️.`,
+      },
+      {
+        title: "👴🦴 A Final Wish",
+        scripture: "📖 Genesis 50",
+        content: `Joseph lived a long life—he died at 110 years old 👴. Before he died, he asked for his bones to be taken to Canaan someday 🦴. Many years later, Moses fulfilled that promise ✨.`,
+      },
+      {
+        title: "💖 A Message for Children",
+        scripture: "",
+        content: `Even when people do wrong, God can use it for good 💡. Joseph trusted God and forgave his brothers. You can too! God has a big plan for your life—just like He did for Joseph ✨.`,
+      },
+    ],
   },
   {
-    title: '🏞️🌸 A New Life in Midian',
-    scripture: '📖 Exodus 2:16–25',
-    content: `In Midian, Moses sat by a well 💧. He saw some shepherd girls being bullied, and he stood up for them. Their father, Jethro (also called Reuel), was so thankful that he invited Moses to stay.
-
-Moses married one of Jethro’s daughters, Zipporah, and had two sons; Gershom and Eliezer 👨‍👩‍👦. He became a shepherd and lived a quiet life in the mountains.`,
+    name: "Adam",
+    sections: [
+      {
+        title: "👶🎨 WATCHOUT",
+        scripture: "📖 Coming Soon",
+        content: `........................`,
+      },
+    ],
   },
   {
-    title: '🔥🌳 The Burning Bush',
-    scripture: '📖 Exodus 3–4',
-    content: `One day, while watching sheep on Mount Horeb ⛰️, Moses saw a bush on fire—but it didn’t burn up! 🔥🌿
-
-He went closer and heard a voice:
-
-“Moses! Moses!”
-
-It was God speaking from the bush 😮!
-
-God told Moses He had heard the cries of the Israelites and wanted to set them free. God chose Moses to lead His people out of Egypt! 🕊️
-
-Moses was scared and didn’t think he was the right person. He said things like:
-
-“What if they don’t believe me?”\n“I can’t speak well!”\n“Please send someone else!”
-
-But God promised,
-
-“I will be with you.” 🙏
-
-He even gave Moses signs:\n✅ His staff turned into a snake 🐍\n✅ His hand became leprous and healed again ✋\n✅ Water turned into blood 🩸
-
-So, Moses finally said “Yes.”`,
+    name: "Abraham",
+    sections: [
+      {
+        title: "👶🎨 WATCHOUT",
+        scripture: "📖 Coming Soon",
+        content: `........................`,
+      },
+    ],
   },
   {
-    title: '🛤️🏙️ Back to Egypt',
-    scripture: '📖 Exodus 4:18–31',
-    content: `Moses took his wife and sons and began the journey back to Egypt. Along the way, his brother Aaron met him and joined him 👬.
-
-Together, they would face Pharaoh and say these powerful words:
-
-“Let my people go!” ✊`,
+    name: "David",
+    sections: [
+      {
+        title: "👶🎨 WATCHOUT",
+        scripture: "📖 Coming Soon",
+        content: `........................`,
+      },
+    ],
   },
   {
-    title: '💬 Moses\' Special Encounters with God',
-    scripture: '',
-    content: `Throughout his life, Moses had many amazing moments with God:
-
-🌿 Burning bush – God calls him (Exodus 3)\n⛓️ In Egypt – God speaks to him and Aaron (Exodus 6–12)\n🌊 Parting the Red Sea – God shows power (Exodus 14)\n⛰️ Mount Sinai – God gives him the Ten Commandments (Exodus 20)\n🏕️ Tent of Meeting – God speaks with Moses as a friend speaks to a friend (Exodus 33:11)`,
+    name: "Noah",
+    sections: [
+      {
+        title: "👶🎨 WATCHOUT",
+        scripture: "📖 Coming Soon",
+        content: `........................`,
+      },
+    ],
   },
   {
-    title: '❤️ A Message for Children',
-    scripture: '',
-    content: `Moses didn’t feel brave or special—but God chose him anyway. He listened, obeyed (even when it was hard), and God used him in amazing ways 💪✨.
-
-Just like Moses, God can use YOU to do great things! \n The story of Moses teaches children about God's faithfulness, leadership, and the importance of listening to and trusting God, even when faced with challenges. It highlights God's protection, power, and plan for his people, and shows how God can use even broken individuals to achieve his purposes.
-The story also emphasizes the importance of obeying God's commands and seeking his will in our lives. `,
+    name: "Peter",
+    sections: [
+      {
+        title: "👶🎨 WATCHOUT",
+        scripture: "📖 Coming Soon",
+        content: `........................`,
+      },
+    ],
+  },
+  {
+    name: "Paul",
+    sections: [
+      {
+        title: "👶🎨 WATCHOUT",
+        scripture: "📖 Coming Soon",
+        content: `........................`,
+      },
+    ],
   },
 ];

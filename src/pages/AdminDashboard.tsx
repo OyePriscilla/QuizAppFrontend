@@ -1,11 +1,18 @@
 import { useEffect, useState } from "react";
 import { db } from "../firebase";
-import { collection, getDocs, deleteDoc, doc, setDoc, updateDoc } from "firebase/firestore";
+import {
+  collection,
+  getDocs,
+  deleteDoc,
+  doc,
+  setDoc,
+  updateDoc,
+} from "firebase/firestore";
 
 type User = {
   id: string;
   username: string;
-  email: string;
+  email?: string; // Optional in case it's not in the DB
 };
 
 const AdminDashboard = () => {
@@ -18,13 +25,15 @@ const AdminDashboard = () => {
       try {
         const querySnapshot = await getDocs(collection(db, "users"));
         const usersList: User[] = [];
-        querySnapshot.forEach((doc) => {
-          usersList.push({ id: doc.id, ...doc.data() } as User);
+        querySnapshot.forEach((docSnap) => {
+          const data = docSnap.data();
+          console.log("Fetched user:", data); // For debugging
+          usersList.push({ id: docSnap.id, ...data } as User);
         });
         setUsers(usersList);
       } catch (error) {
         setError("Error fetching users.");
-        console.error(error);
+        console.error("Fetch error:", error);
       }
     };
 
@@ -57,7 +66,7 @@ const AdminDashboard = () => {
     if (newUsername) {
       const newUser = {
         username: newUsername,
-        email: `${newUsername}@gmail.com`, // Example email structure
+        email: `${newUsername.toLowerCase()}@example.com`, // Optional default email
       };
       try {
         const userRef = doc(collection(db, "users"));
@@ -93,10 +102,16 @@ const AdminDashboard = () => {
 
       <div className="space-y-4">
         {users.map((user) => (
-          <div key={user.id} className="flex justify-between items-center p-4 border border-gray-300 rounded-lg">
+          <div
+            key={user.id}
+            className="flex justify-between items-center p-4 border border-gray-300 rounded-lg"
+          >
             <div>
               <p className="font-bold">{user.username}</p>
-              <p>{user.email}</p>
+              {/* Display email if available, otherwise a fallback */}
+              <p className="text-sm text-gray-500">
+                {user.email ?? `${user.username.toLowerCase()}@example.com`}
+              </p>
             </div>
             <div className="space-x-2">
               <button

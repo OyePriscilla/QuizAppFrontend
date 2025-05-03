@@ -1,0 +1,202 @@
+[
+    {
+      "question": "Who was Joseph's mother?",
+      "options": ["Leah", "Rachel", "Rebekah", "Sarah"],
+      "answer": "Rachel"
+    },
+    {
+      "question": "Who was Joseph's father?",
+      "options": ["Isaac", "Jacob", "Abraham", "Laban"],
+      "answer": "Jacob"
+    },
+    {
+      "question": "What special gift did Jacob give Joseph?",
+      "options": ["A ring", "A coat of many colors", "A staff", "A necklace"],
+      "answer": "A coat of many colors"
+    },
+    {
+      "question": "Why did Joseph's brothers hate him?",
+      "options": ["He was arrogant", "He was their father's favorite", "He tattled on them", "He was older"],
+      "answer": "He was their father's favorite"
+    },
+    {
+      "question": "What did Joseph dream about that made his brothers angry?",
+      "options": ["Stars and moon bowing to him", "Sheaves of grain bowing to his sheaf", "Animals bowing to him", "Angels praising him"],
+      "answer": "Sheaves of grain bowing to his sheaf"
+    },
+    {
+      "question": "What did Joseph's brothers initially plan to do to him?",
+      "options": ["Kill him", "Sell him", "Hide him", "Send him away"],
+      "answer": "Kill him"
+    },
+    {
+      "question": "Which brother suggested throwing Joseph into a pit?",
+      "options": ["Reuben", "Judah", "Levi", "Simeon"],
+      "answer": "Reuben"
+    },
+    {
+      "question": "For how much was Joseph sold to the Ishmaelites?",
+      "options": ["10 pieces of silver", "20 pieces of silver", "30 pieces of silver", "40 pieces of silver"],
+      "answer": "20 pieces of silver"
+    },
+    {
+      "question": "To whom was Joseph sold in Egypt?",
+      "options": ["Pharaoh", "Potiphar", "The baker", "The cupbearer"],
+      "answer": "Potiphar"
+    },
+    {
+      "question": "Why was Joseph imprisoned in Egypt?",
+      "options": ["He stole from Potiphar", "He assaulted Potiphar's wife", "He was falsely accused by Potiphar's wife", "He tried to escape"],
+      "answer": "He was falsely accused by Potiphar's wife"
+    },
+    {
+      "question": "Who were Joseph's fellow prisoners?",
+      "options": ["The baker and the cupbearer", "Two guards", "Two merchants", "Two soldiers"],
+      "answer": "The baker and the cupbearer"
+    },
+    {
+      "question": "What did Joseph interpret for Pharaoh?",
+      "options": ["A dream about cows and grain", "A vision of angels", "A prophecy of war", "A sign from the heavens"],
+      "answer": "A dream about cows and grain"
+    },
+    {
+      "question": "What position did Pharaoh give Joseph?",
+      "options": ["Governor", "Prime Minister", "Vizier", "Chief Steward"],
+      "answer": "Vizier"
+    },
+    {
+      "question": "What new name did Pharaoh give Joseph?",
+      "options": ["Zaphenath-Paneah", "Imhotep", "Ramesses", "Tutankhamun"],
+      "answer": "Zaphenath-Paneah"
+    },
+    {
+      "question": "Who did Joseph marry in Egypt?",
+      "options": ["Asenath", "Cleopatra", "Miriam", "Zipporah"],
+      "answer": "Asenath"
+    },
+    {
+      "question": "What were the names of Joseph's sons?",
+      "options": ["Ephraim and Manasseh", "Cain and Abel", "Jacob and Esau", "David and Solomon"],
+      "answer": "Ephraim and Manasseh"
+    },
+    {
+      "question": "How many years of plenty did Egypt experience?",
+      "options": ["5", "7", "10", "12"],
+      "answer": "7"
+    },
+    {
+      "question": "How many years of famine followed the years of plenty?",
+      "options": ["5", "7", "10", "12"],
+      "answer": "7"
+    },
+    {
+      "question": "Who came to Egypt to buy grain during the famine?",
+      "options": ["Joseph's brothers", "The Canaanites", "The Israelites", "The Midianites"],
+      "answer": "Joseph's brothers"
+    },
+    {
+      "question": "Which brother did Joseph keep as a hostage?",
+      "options": ["Reuben", "Simeon", "Levi", "Judah"],
+      "answer": "Simeon"
+    },
+    {
+      "question": "Who was Joseph's full brother?",
+      "options": ["Benjamin", "Reuben", "Levi", "Judah"],
+      "answer": "Benjamin"
+    },
+    {
+      "question": "What did Joseph place in Benjamin's sack?",
+      "options": ["Money", "A silver cup", "A golden ring", "A scroll"],
+      "answer": "A silver cup"
+    },
+    {
+      "question": "Which brother offered to take Benjamin's place?",
+      "options": ["Judah", "Reuben", "Levi", "Simeon"],
+      "answer": "Judah"
+    },
+    {
+      "question": "How did Joseph reveal his identity to his brothers?",
+      "options": ["By removing his disguise", "By speaking Hebrew", "By showing his coat", "By telling them directly"],
+      "answer": "By telling them directly"
+    },
+    {
+      "question": "What did Joseph tell his brothers about their actions?",
+      "options": ["They were unforgivable", "God used them for good", "They would be punished", "They were forgotten"],
+      "answer": "God used them for good"
+    },
+    {
+      "question": "Where did Joseph's family settle in Egypt?",
+      "options": ["Goshen", "Thebes", "Memphis", "Alexandria"],
+      "answer": "Goshen"
+    },
+    {
+      "question": "How old was Joseph when he died?",
+      "options": ["110", "120", "100", "90"],
+      "answer": "110"
+    },
+    {
+      "question": "What did Joseph request regarding his remains?",
+      "options": ["To be buried in Egypt", "To be taken to Canaan", "To be cremated", "To be placed in a pyramid"],
+      "answer": "To be taken to Canaan"
+    },
+    {
+      "question": "Who fulfilled Joseph's request about his remains?",
+      "options": ["Moses", "Joshua", "Aaron", "Caleb"],
+      "answer": "Moses"
+    },
+    {
+      "question": "What did Joseph's brothers do to deceive their father?",
+      "options": ["Told him Joseph was dead", "Showed him a bloodied coat", "Said Joseph ran away", "All of the above"],
+      "answer": "All of the above"
+    },
+    {
+      "question": "Who was the oldest of Joseph's brothers?",
+      "options": ["Reuben", "Simeon", "Levi", "Judah"],
+      "answer": "Reuben"
+    },
+    {
+      "question": "What was Joseph's role in Potiphar's house?",
+      "options": ["Servant", "Overseer", "Cook", "Guard"],
+      "answer": "Overseer"
+    },
+    {
+      "question": "How did Joseph respond to Potiphar's wife's advances?",
+      "options": ["He accepted", "He fled", "He confronted her", "He told Potiphar"],
+      "answer": "He fled"
+    },
+    {
+      "question": "What did Joseph interpret Pharaoh's dreams to mean?",
+      "options": ["Seven years of war", "Seven years of famine", "Seven years of plenty followed by seven years of famine", "Seven years of peace"],
+      "answer": "Seven years of plenty followed by seven years of famine"
+    },
+    {
+      "question": "What did Pharaoh give Joseph as a sign of authority?",
+      "options": ["A crown", "A ring", "A staff", "A chariot"],
+      "answer": "A ring"
+    },
+    {
+      "question": "What did Joseph store during the years of plenty?",
+      "options": ["Gold", "Silver", "Grain", "Oil"],
+      "answer": "Grain"
+    },
+    {
+      "question": "Who accused Joseph of wrongdoing leading to his imprisonment?",
+      "options": ["Pharaoh", "Potiphar's wife", "The cupbearer", "The baker"],
+      "answer": "Potiphar's wife"
+    },
+    {
+      "question": "Who forgot Joseph after being released from prison?",
+      "options": ["The baker", "The cupbearer", "Pharaoh", "Potiphar"],
+      "answer": "The cupbearer"
+    },
+    {
+      "question": "What did Joseph do when he saw his brothers in Egypt?",
+      "options": ["Revealed himself", "Accused them of spying", "Ignored them", "Punished them"],
+      "answer": "Accused them of spying"
+    },
+    {
+      "question": "What did Joseph instruct his brothers to bring to Egypt?",
+      "options": ["Their father", "Benjamin", "All their belongings", "More money"],
+      "answer": "Benjamin"
+    }
+  ]

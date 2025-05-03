@@ -25,6 +25,7 @@ const Dashboard = () => {
   const [showResult, setShowResult] = useState<number | null>(null);
   const navigate = useNavigate();
 
+
   useEffect(() => {
     const username = localStorage.getItem("username");
 
@@ -41,16 +42,19 @@ const Dashboard = () => {
           const results: QuizResult[] = [];
           querySnapshot.forEach((doc) => {
             const data = doc.data() as Omit<QuizResult, "id">;
-            const timestamp = data.timestamp instanceof Timestamp ? data.timestamp : null;
+            const timestamp =
+              data.timestamp instanceof Timestamp ? data.timestamp : null;
             //@ts-ignore
             results.push({ id: doc.id, ...data, timestamp: timestamp });
           });
 
           // Log the fetched results
-          console.log('Fetched Results:', results);
+          console.log("Fetched Results:", results);
 
           // Sort by latest first (assuming `timestamp` is available)
-          results.sort((a, b) => (b.timestamp?.seconds ?? 0) - (a.timestamp?.seconds ?? 0));
+          results.sort(
+            (a, b) => (b.timestamp?.seconds ?? 0) - (a.timestamp?.seconds ?? 0)
+          );
           setQuizResults(results);
         } catch (error) {
           console.error(error);
@@ -61,7 +65,6 @@ const Dashboard = () => {
       fetchQuizResults();
     }
   }, [navigate]);
-
 
   const handleShowDetails = (index: number) => {
     setShowResult(showResult === index ? null : index);
@@ -85,7 +88,9 @@ const Dashboard = () => {
                     Quiz #{index + 1} - {result.username}
                   </h3>
                   <p className="text-lg font-semibold text-gray-500">
-                    {result.timestamp ? result.timestamp.toDate().toLocaleString() : "No Date"}
+                    {result.timestamp
+                      ? result.timestamp.toDate().toLocaleString()
+                      : "No date"}
                   </p>
                 </div>
 
@@ -124,7 +129,9 @@ const Dashboard = () => {
                             : "border-red-400 bg-red-50"
                         }`}
                       >
-                        <h3 className="text-lg font-semibold">{item.question}</h3>
+                        <h3 className="text-lg font-semibold">
+                          {item.question}
+                        </h3>
                         <div className="mt-2 space-y-1">
                           {item.options.map((option, i) => {
                             const selected = item.userAnswer === option;

@@ -22,7 +22,7 @@ const Nav = () => {
       <div className="w-full max-w-7xl mx-auto px-4 py-4 font-serif font-bold flex flex-col sm:flex-row items-center justify-between">
         {/* Logo or Title */}
         <h1 className="text-3xl sm:text-4xl font-extrabold text-white drop-shadow-md mb-4 sm:mb-0">
-          Inspire 📖
+          BE Inspired 📖
         </h1>
 
         {/* Navigation Links */}
@@ -57,6 +57,12 @@ const Nav = () => {
                 className="px-4 py-2 bg-white text-amber-600 rounded-full hover:bg-yellow-100 font-semibold transition-all"
               >
                 Bible Story
+              </Link>
+              <Link
+                to="/josephmod"
+                className="px-4 py-2 bg-white text-amber-600 rounded-full hover:bg-yellow-100 font-semibold transition-all"
+              >
+                Games
               </Link>
               <Link
                 to="/signin"

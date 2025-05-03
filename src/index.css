@@ -1,2 +1,24 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Chewy&family=Nunito&display=swap');
+
+/* Add this to your CSS */
+@keyframes climb {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-50px); /* Adjust based on your ladder step height */
+    }
+  }
+
+  .player {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .player.climb {
+    animation: climb 0.5s ease-out;
+  }

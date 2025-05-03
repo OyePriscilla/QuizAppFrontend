@@ -1,10 +1,19 @@
-import { useState } from "react";
-import mosesQuizData from "../data/MosesQuiz.json";
+import { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import ResultDetails from "../components/ResultDetails";
 import { v4 as uuidv4 } from "uuid";
-import { useNavigate } from "react-router-dom";
 import { db } from "../firebase";
 import { collection, addDoc } from "firebase/firestore";
+
+// Import all quiz data
+import mosesQuizData from "../data/MosesQuiz.json";
+import josephQuizData from "../data/JosephQuiz.json";
+// import adamQuizData from "../data/AdamQuiz.json";
+// import abrahamQuizData from "../data/AbrahamQuiz.json";
+// import davidQuizData from "../data/DavidQuiz.json";
+// import noahQuizData from "../data/NoahQuiz.json";
+// import peterQuizData from "../data/PeterQuiz.json";
+// import paulQuizData from "../data/PaulQuiz.json";
 
 type QuizItem = {
   question: string;
@@ -13,17 +22,22 @@ type QuizItem = {
   userAnswer?: string;
 };
 
+const quizMap: { [key: string]: QuizItem[] } = {
+  moses: mosesQuizData,
+  joseph: josephQuizData,
+  // adam: adamQuizData,
+  // abraham: abrahamQuizData,
+  // david: davidQuizData,
+  // noah: noahQuizData,
+  // peter: peterQuizData,
+  // paul: paulQuizData,
+};
+
 const Quiz = () => {
+  const { character } = useParams(); // get character from URL
   const username = localStorage.getItem("username");
-
-  const getRandomQuestions = (count: number): QuizItem[] => {
-    const shuffled = [...mosesQuizData].sort(() => Math.random() - 0.5);
-    return shuffled.slice(0, count).map((q) => ({ ...q, userAnswer: "" }));
-  };
-
-  const [quizState, setQuizState] = useState<QuizItem[]>(() =>
-    getRandomQuestions(20)
-  );
+   //@ts-ignore
+  const [intervalId, setIntervalId] = useState<NodeJS.Timeout | null>(null);
   const [message, setMessage] = useState("");
   const [completed, setCompleted] = useState<boolean>(false);
   const [quizScore, setQuizScore] = useState<number>(0);
@@ -32,8 +46,26 @@ const Quiz = () => {
   const [timer, setTimer] = useState<number>(900);
   const navigate = useNavigate();
   //@ts-ignore
-  const [intervalId, setIntervalId] = useState<NodeJS.Timeout | null>(null);
   const [resultData, setResultData] = useState<any>(null);
+
+
+  const getRandomQuestions = (data: QuizItem[], count: number): QuizItem[] => {
+    const shuffled = [...data].sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, count).map((q) => ({ ...q, userAnswer: "" }));
+  };
+
+  const [quizState, setQuizState] = useState<QuizItem[]>([]);
+
+  useEffect(() => {
+    const lowerChar = character?.toLowerCase();
+    if (!lowerChar || !quizMap[lowerChar]) {
+      navigate("/select-quiz"); // fallback if no quiz found
+    } else {
+      const questions = getRandomQuestions(quizMap[lowerChar], 20);
+      setQuizState(questions);
+    }
+  }, [character, navigate]);
+
 
   const handleSelectAnswer = (questionIndex: number, selected: string) => {
     const updatedQuiz = [...quizState];
