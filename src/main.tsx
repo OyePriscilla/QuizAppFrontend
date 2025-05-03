@@ -7,7 +7,7 @@ import "keen-slider/keen-slider.min.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="QuizAppFrontend">
       <App />
     </BrowserRouter>
   </StrictMode>
