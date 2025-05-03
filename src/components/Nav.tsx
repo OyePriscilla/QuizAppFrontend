@@ -58,12 +58,7 @@ const Nav = () => {
               >
                 Bible Story
               </Link>
-              <Link
-                to="/josephmod"
-                className="px-4 py-2 bg-white text-amber-600 rounded-full hover:bg-yellow-100 font-semibold transition-all"
-              >
-                Games
-              </Link>
+             
               <Link
                 to="/signin"
                 className="px-4 py-2 bg-white text-amber-600 rounded-full hover:bg-yellow-100 font-semibold transition-all"
