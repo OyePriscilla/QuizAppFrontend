@@ -38,6 +38,7 @@ const SelectQuiz = () => {
         <p className="text-lg text-center text-purple-700 mb-6 font-semibold">
           Pick your hero and start the adventure!
         </p>
+        <h2 className="text-lg text-center bg-purple-800 text-white mb-6 font-semibold p-2 rounded"> Note: Quiz is only available for Moses' and Joseph's Characters.</h2>
         {message && (
           <p className="mb-3 text-center text-red-600 font-bold">
             🚧 No quiz available for this Character yet. Kindly be patient while

@@ -37,22 +37,21 @@ const BibleStory: React.FC = () => {
         </ul>
       </aside>
 
-      {/* Mobile Sidebar Button */}
+      {/* Mobile Sidebar Toggle */}
       <button
-        className="md:hidden p-4 bg-purple-700 text-white fixed top-4 left-4 z-10 rounded-full shadow-lg"
+        className="md:hidden p-2 bg-purple-700 text-white fixed top-50 left-4 z-110 rounded shadow-lg"
         onClick={() => setSidebarOpen(!sidebarOpen)}
       >
         ☰
       </button>
 
-      {/* Main Content */}
+      {/* Main Story Content */}
       <main className="flex-1 p-6">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl font-bold text-center text-purple-700 mb-6">
             📖 {selectedCharacter}'s Story
           </h1>
 
-          {/* Show Story if Available */}
           {currentStory ? (
             <div className="space-y-8">
               {currentStory.sections.map((section, index) => (
@@ -84,12 +83,12 @@ const BibleStory: React.FC = () => {
 
       {/* Sidebar for mobile screens */}
       <div
-        className={`fixed top-0 left-0 h-full bg-white shadow-md p-6 w-64 z-20 transition-transform transform ${
+        className={`fixed top-44 left-0 h-full bg-white shadow-md p-6 w-64 z-20 transition-transform transform ${
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
         } md:hidden`}
       >
-        <h2 className="text-2xl font-bold text-purple-700 mb-6 text-center">
-          Bible Characters
+        <h2 className="text-2xl font-bold text-purple-700 mb-6 text-center ml-8">
+           Characters
         </h2>
         <ul className="space-y-4">
           {characters.map((character) => (
@@ -100,7 +99,10 @@ const BibleStory: React.FC = () => {
                     ? "bg-purple-300 font-bold"
                     : ""
                 }`}
-                onClick={() => setSelectedCharacter(character.name)}
+                onClick={() => {
+                  setSelectedCharacter(character.name);
+                  setSidebarOpen(false);
+                }}
               >
                 {character.name}
               </button>
@@ -114,7 +116,7 @@ const BibleStory: React.FC = () => {
 
 export default BibleStory;
 
-// Sidebar character list
+// Character List
 const characters = [
   { name: "Moses" },
   { name: "Joseph" },
@@ -123,10 +125,9 @@ const characters = [
   { name: "David" },
   { name: "Noah" },
   { name: "Peter" },
-  { name: "Paul" },
 ];
 
-// Stories data
+// Stories Data
 const stories = [
   {
     name: "Moses",
@@ -134,37 +135,39 @@ const stories = [
       {
         title: "🧺👶 The Baby in the Basket",
         scripture: "📖 Exodus 1–2",
-        content: `A long time ago, in Egypt, the king (called Pharaoh) saw that the Israelites were growing...`,
+        content: `A long time ago, in Egypt, the king (called Pharaoh) saw that the Israelites were growing in number and strength. He became afraid. He ordered all baby boys to be thrown into the Nile River 😢.
+
+But one brave mother hid her baby for three months. When she couldn’t hide him anymore, she placed him in a basket and set it afloat on the river. Pharaoh’s daughter found him and named him Moses, which means “drawn out of the water.”`,
       },
       {
         title: "🏰👦 Moses Grows Up in the Palace",
         scripture: "📖 Exodus 2:10–15",
-        content: `Moses grew up in Pharaoh’s palace like a prince 👑! ...`,
+        content: `Moses grew up in Pharaoh’s palace like a prince 👑! But he knew he was really an Israelite. One day, he saw an Egyptian beating an Israelite and became very angry. Moses struck the Egyptian and ran away to the land of Midian.`,
       },
       {
         title: "🏞️🌸 A New Life in Midian",
         scripture: "📖 Exodus 2:16–25",
-        content: `In Midian, Moses sat by a well 💧...`,
+        content: `In Midian, Moses sat by a well 💧. He helped some women there, and their father Jethro invited him to stay. Moses married one of the daughters, Zipporah, and became a shepherd.`,
       },
       {
         title: "🔥🌳 The Burning Bush",
         scripture: "📖 Exodus 3–4",
-        content: `One day, while watching sheep on Mount Horeb ⛰️, Moses saw a bush on fire...`,
+        content: `One day, while watching sheep on Mount Horeb ⛰️, Moses saw a bush on fire—but it didn’t burn up! 🔥 God spoke from the bush and told Moses to go back to Egypt and lead His people out of slavery.`,
       },
       {
         title: "🛤️🏙️ Back to Egypt",
         scripture: "📖 Exodus 4:18–31",
-        content: `Moses took his wife and sons and began the journey back to Egypt...`,
+        content: `Moses took his wife and sons and began the journey back to Egypt. God sent his brother Aaron to help him speak. They told the Israelites that God had heard their cries.`,
       },
       {
         title: "💬 Moses' Special Encounters with God",
         scripture: "",
-        content: `Throughout his life, Moses had many amazing moments with God...`,
+        content: `Throughout his life, Moses had many amazing moments with God—parting the Red Sea 🌊, receiving the Ten Commandments 🪨, and talking to God face-to-face.`,
       },
       {
         title: "❤️ A Message for Children",
         scripture: "",
-        content: `Moses didn’t feel brave or special—but God chose him anyway...`,
+        content: `Moses didn’t feel brave or special—but God chose him anyway. God can use you, too, even if you feel small! 💫`,
       },
     ],
   },
@@ -194,7 +197,7 @@ const stories = [
       {
         title: "🏠💼 Joseph in Potiphar’s House",
         scripture: "📖 Genesis 39:1–6",
-        content: `In Egypt, Joseph was sold to a man named Potiphar 🏛️. Joseph worked hard and became the overseer of Potiphar’s house 🧹. God was with him and helped him succeed 🙏.`,
+        content: `In Egypt, Joseph was sold to Potiphar 🏛️. Joseph worked hard and became the overseer of Potiphar’s house 🧹. God was with him and helped him succeed 🙏.`,
       },
       {
         title: "🚪😳 Trouble with Potiphar’s Wife",
@@ -204,107 +207,37 @@ const stories = [
       {
         title: "⛓️🍞 Dreams in Jail",
         scripture: "📖 Genesis 40",
-        content: `In prison, Joseph met Pharaoh’s baker and cupbearer 🥖🍷. They had dreams, and Joseph told them what their dreams meant 😮. His words came true—but the cupbearer forgot about Joseph! 🙁`,
+        content: `In prison, Joseph met Pharaoh’s baker and cupbearer 🥖🍷. They had dreams, and Joseph told them what they meant 😮. His words came true—but the cupbearer forgot about Joseph! 🙁`,
       },
       {
         title: "🐄🌾 Pharaoh’s Strange Dreams",
         scripture: "📖 Genesis 41:1–36",
-        content: `Two years later, Pharaoh had strange dreams about skinny cows and fat cows 🐄, and thin grain swallowing fat grain 🌾. Joseph was called to explain them. He said the dreams meant seven years of plenty would come, followed by seven years of famine 🍽️.`,
+        content: `Two years later, Pharaoh had strange dreams about skinny cows and fat cows 🐄, and thin grain swallowing fat grain 🌾. Joseph explained the dreams meant seven years of plenty, then seven years of famine 🍽️.`,
       },
       {
         title: "👑💍 From Prisoner to Prince",
         scripture: "📖 Genesis 41:37–57",
-        content: `Pharaoh was amazed 😲 and made Joseph the second most powerful man in Egypt! He gave Joseph a royal ring 💍, a new name—Zaphenath-Paneah 📛—and a wife named Asenath 💕. Joseph stored up grain to prepare for the famine.`,
+        content: `Pharaoh was amazed 😲 and made Joseph the second most powerful man in Egypt! He gave him a royal ring 💍 and a wife named Asenath 💕. Joseph prepared Egypt for the famine.`,
       },
       {
         title: "🌍🌽 Visitors from Canaan",
         scripture: "📖 Genesis 42–43",
-        content: `When the famine came, Joseph’s brothers came to Egypt to buy food 🍞. They didn’t recognize Joseph, but he knew who they were 😮. He tested them and kept Simeon as a hostage 🔐, asking them to bring Benjamin.`,
+        content: `When the famine came, Joseph’s brothers came to buy food 🍞. They didn’t recognize Joseph 😮. He tested them and asked for Benjamin to be brought.`,
       },
       {
         title: "💔🍽️ The Silver Cup Trick",
         scripture: "📖 Genesis 44",
-        content: `The brothers returned with Benjamin. But Joseph placed his silver cup 🏆 in Benjamin’s sack! Then he accused them of stealing 😲. Judah offered to take Benjamin’s place 💖.`,
+        content: `Joseph hid a silver cup 🏆 in Benjamin’s sack and accused them of stealing 😲. Judah offered to take Benjamin’s place 💖.`,
       },
       {
         title: "😭🤗 The Big Reveal",
         scripture: "📖 Genesis 45",
-        content: `Joseph couldn’t hide it anymore—he told them who he really was 😭. “I am Joseph!” he cried. His brothers were shocked 😯, but Joseph forgave them and said, “God used it all for good” 🙏.`,
+        content: `Joseph couldn’t hold it in anymore. “I am Joseph!” he said, crying 😭. His brothers were shocked, but Joseph forgave them 🙏.`,
       },
       {
         title: "🏡👨‍👩‍👦 Family Reunited in Goshen",
-        scripture: "📖 Genesis 46–47",
-        content: `Joseph brought his whole family to Egypt. They lived in a land called Goshen 🌾. Jacob was so happy to see his son again. Joseph kept them safe and fed during the famine ❤️.`,
-      },
-      {
-        title: "👴🦴 A Final Wish",
-        scripture: "📖 Genesis 50",
-        content: `Joseph lived a long life—he died at 110 years old 👴. Before he died, he asked for his bones to be taken to Canaan someday 🦴. Many years later, Moses fulfilled that promise ✨.`,
-      },
-      {
-        title: "💖 A Message for Children",
-        scripture: "",
-        content: `Even when people do wrong, God can use it for good 💡. Joseph trusted God and forgave his brothers. You can too! God has a big plan for your life—just like He did for Joseph ✨.`,
-      },
-    ],
-  },
-  {
-    name: "Adam",
-    sections: [
-      {
-        title: "👶🎨 WATCHOUT",
-        scripture: "📖 Coming Soon",
-        content: `........................`,
-      },
-    ],
-  },
-  {
-    name: "Abraham",
-    sections: [
-      {
-        title: "👶🎨 WATCHOUT",
-        scripture: "📖 Coming Soon",
-        content: `........................`,
-      },
-    ],
-  },
-  {
-    name: "David",
-    sections: [
-      {
-        title: "👶🎨 WATCHOUT",
-        scripture: "📖 Coming Soon",
-        content: `........................`,
-      },
-    ],
-  },
-  {
-    name: "Noah",
-    sections: [
-      {
-        title: "👶🎨 WATCHOUT",
-        scripture: "📖 Coming Soon",
-        content: `........................`,
-      },
-    ],
-  },
-  {
-    name: "Peter",
-    sections: [
-      {
-        title: "👶🎨 WATCHOUT",
-        scripture: "📖 Coming Soon",
-        content: `........................`,
-      },
-    ],
-  },
-  {
-    name: "Paul",
-    sections: [
-      {
-        title: "👶🎨 WATCHOUT",
-        scripture: "📖 Coming Soon",
-        content: `........................`,
+        scripture: "📖 Genesis 46–50",
+        content: `Joseph invited his whole family to live in Egypt. Jacob saw his son again 💕. Joseph stayed faithful and said, “You meant it for harm, but God used it for good.” 🌟`,
       },
     ],
   },

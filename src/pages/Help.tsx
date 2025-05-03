@@ -46,6 +46,32 @@ const Help = () => {
               We encourage you to read the Bible Story before taking the quiz to help you prepare better.
             </p>
           </section>
+          <section>
+  <h2 className="text-2xl font-bold text-pink-600 mb-3">
+    📱 Accessing the Menu on Mobile
+  </h2>
+  <p className="text-gray-700 text-lg">
+    On mobile devices, the main navigation menu is hidden to save space.
+    <br />
+    To access it:
+    <ul className="list-disc pl-6 mt-2">
+      <li>
+        Look for the <span className="font-bold text-purple-700 text-lg">☰</span> button near the top-left corner of your screen.
+      </li>
+      <li>
+        Tap this <span className="font-semibold"> ☰ menu icon</span> to open the sidebar.
+      </li>
+      <li>
+        From the sidebar, you can navigate to stories like <span className="font-semibold">Moses, Joseph, Adam ...</span> and more.
+      </li>
+      <li>
+        Tap the menu icon again or click outside the sidebar to close it.
+      </li>
+    </ul>
+    This helps keep the interface clean and easy to use on smaller screens.
+  </p>
+</section>
+
 
           <section>
             <h2 className="text-2xl font-bold text-pink-600 mb-3">
