@@ -13,6 +13,7 @@ import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/AdminDashboard";
 import Help from "./pages/Help";
 import SelectQuiz from "./pages/QuizSelection";
+import DashboardAdminTwo from "./pages/DashboardAdminTwo";
 
 const NavBars: NavBar[] = [
   { path: "/", element: <Home /> },
@@ -25,6 +26,7 @@ const NavBars: NavBar[] = [
   { path: "/admin/dashboard", element: <AdminDashboard /> },
   { path: "/help", element: <Help /> },
   { path: "/selectquiz", element: <SelectQuiz /> },
+  { path: "/admindashboard", element: <DashboardAdminTwo /> },
 ];
 
 function App() {

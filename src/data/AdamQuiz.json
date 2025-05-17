@@ -1,0 +1,197 @@
+[
+    {
+      "question": "Who tempted Eve in the Garden of Eden?",
+      "options": ["A lion", "Adam", "A serpent", "An angel"],
+      "answer": "A serpent"
+    },
+    {
+      "question": "What did the serpent ask Eve?",
+      "options": ["Where is God?", "Did God really say you can’t eat from any tree?", "Are you happy?", "Do you want to leave Eden?"],
+      "answer": "Did God really say you can’t eat from any tree?"
+    },
+    {
+      "question": "What fruit did Eve eat?",
+      "options": ["Banana", "Apple", "Fig", "It is not specified"],
+      "answer": "It is not specified"
+    },
+    {
+      "question": "Who ate the fruit after Eve?",
+      "options": ["God", "A serpent", "Adam", "An angel"],
+      "answer": "Adam"
+    },
+    {
+      "question": "What did Adam and Eve realize after eating the fruit?",
+      "options": ["They were alone", "They were naked", "They were wrong", "They were hungry"],
+      "answer": "They were naked"
+    },
+    {
+      "question": "What did Adam and Eve use to cover themselves?",
+      "options": ["Animal skins", "Palm leaves", "Fig leaves", "Cloth"],
+      "answer": "Fig leaves"
+    },
+    {
+      "question": "What time of day did God walk in the garden?",
+      "options": ["Morning", "Noon", "Evening", "Cool of the day"],
+      "answer": "Cool of the day"
+    },
+    {
+      "question": "What did Adam and Eve do when they heard God?",
+      "options": ["Ran to Him", "Hid", "Prayed", "Left the garden"],
+      "answer": "Hid"
+    },
+    {
+      "question": "Who did Adam blame for eating the fruit?",
+      "options": ["God", "Eve", "The serpent", "Himself"],
+      "answer": "Eve"
+    },
+    {
+      "question": "Who did Eve blame?",
+      "options": ["The serpent", "Adam", "God", "Herself"],
+      "answer": "The serpent"
+    },
+    {
+      "question": "What was the serpent cursed to do?",
+      "options": ["Fly", "Speak no more", "Crawl on its belly", "Lose its color"],
+      "answer": "Crawl on its belly"
+    },
+    {
+      "question": "What pain would Eve face as a result of the curse?",
+      "options": ["Loneliness", "Childbirth", "Old age", "Hunger"],
+      "answer": "Childbirth"
+    },
+    {
+      "question": "What hardship would Adam face?",
+      "options": ["Hunger", "Hard work", "Sickness", "Cold"],
+      "answer": "Hard work"
+    },
+    {
+      "question": "What was cursed because of Adam’s disobedience?",
+      "options": ["The tree", "The serpent", "The ground", "The sun"],
+      "answer": "The ground"
+    },
+    {
+      "question": "Who would crush the serpent’s head?",
+      "options": ["An angel", "Adam", "The woman’s offspring", "Eve"],
+      "answer": "The woman’s offspring"
+    },
+    {
+      "question": "What future hope did God give in Genesis 3:15?",
+      "options": ["A new garden", "A Savior", "A flood", "An angel"],
+      "answer": "A Savior"
+    },
+    {
+      "question": "What does the name 'Eve' mean?",
+      "options": ["Mother of animals", "Life", "Wisdom", "Joy"],
+      "answer": "Life"
+    },
+    {
+      "question": "What did God make clothes from?",
+      "options": ["Leaves", "Wool", "Animal skins", "Cotton"],
+      "answer": "Animal skins"
+    },
+    {
+      "question": "Why were Adam and Eve sent out of the garden?",
+      "options": ["They were tired", "They were lost", "They sinned", "They chose to leave"],
+      "answer": "They sinned"
+    },
+    {
+      "question": "What guarded the Tree of Life after they left?",
+      "options": ["A wall", "A lion", "An angel with a flaming sword", "Adam’s son"],
+      "answer": "An angel with a flaming sword"
+    },
+    {
+      "question": "What does the story of Genesis 3 teach about God?",
+      "options": ["He abandons sinners", "He is kind and forgiving", "He hides from people", "He never returns"],
+      "answer": "He is kind and forgiving"
+    },
+    {
+      "question": "What was the first emotion Adam and Eve felt after sinning?",
+      "options": ["Joy", "Fear", "Shame", "Pride"],
+      "answer": "Shame"
+    },
+    {
+      "question": "What broke because of sin?",
+      "options": ["The tree", "The garden", "Trust between God and man", "The serpent’s voice"],
+      "answer": "Trust between God and man"
+    },
+    {
+      "question": "What emotion made them hide?",
+      "options": ["Anger", "Confusion", "Fear", "Excitement"],
+      "answer": "Fear"
+    },
+    {
+      "question": "What did God ask Adam?",
+      "options": ["Why did you run?", "Where are you?", "Do you love me?", "Who are you?"],
+      "answer": "Where are you?"
+    },
+    {
+      "question": "How did sin affect creation?",
+      "options": ["It was destroyed", "It was blessed", "It was cursed", "It stayed the same"],
+      "answer": "It was cursed"
+    },
+    {
+      "question": "What does the flaming sword represent?",
+      "options": ["Judgment", "Salvation", "Hope", "Fear"],
+      "answer": "Judgment"
+    },
+    {
+      "question": "What does God’s act of clothing Adam and Eve show?",
+      "options": ["His anger", "His care", "His forgetfulness", "His distance"],
+      "answer": "His care"
+    },
+    {
+      "question": "Who is the 'offspring' that would defeat the serpent?",
+      "options": ["Abel", "Moses", "Jesus", "Seth"],
+      "answer": "Jesus"
+    },
+    {
+      "question": "What does the serpent symbolize?",
+      "options": ["Wisdom", "Deceit", "Freedom", "Strength"],
+      "answer": "Deceit"
+    },
+    {
+      "question": "How did Eve view the fruit before eating it?",
+      "options": ["Poisonous", "Ugly", "Tasty and desirable", "Ordinary"],
+      "answer": "Tasty and desirable"
+    },
+    {
+      "question": "What changed instantly after eating the fruit?",
+      "options": ["Their location", "Their speech", "Their awareness", "Their language"],
+      "answer": "Their awareness"
+    },
+    {
+      "question": "What does the promise in Genesis 3:15 point to?",
+      "options": ["End of time", "Coming of Jesus", "Destruction of Eden", "Babel"],
+      "answer": "Coming of Jesus"
+    },
+    {
+      "question": "Why is Genesis 3 important in the Bible?",
+      "options": ["It teaches math", "It begins the story of salvation", "It tells how to farm", "It shows how angels live"],
+      "answer": "It begins the story of salvation"
+    },
+    {
+      "question": "What entered the world through Adam and Eve’s sin?",
+      "options": ["Love", "Joy", "Sin and death", "Rain"],
+      "answer": "Sin and death"
+    },
+    {
+      "question": "How did God respond to their sin?",
+      "options": ["With silence", "With destruction", "With justice and care", "With exile only"],
+      "answer": "With justice and care"
+    },
+    {
+      "question": "What should we do when we make wrong choices?",
+      "options": ["Hide", "Blame others", "Say sorry and try again", "Pretend nothing happened"],
+      "answer": "Say sorry and try again"
+    },
+    {
+      "question": "What does the story remind us about God's love?",
+      "options": ["It depends on our behavior", "It never gives up", "It is hidden", "It is earned"],
+      "answer": "It never gives up"
+    },
+    {
+      "question": "What began after Adam and Eve left Eden?",
+      "options": ["A new creation", "The journey of redemption", "Another garden", "A war"],
+      "answer": "The journey of redemption"
+    }
+  ]

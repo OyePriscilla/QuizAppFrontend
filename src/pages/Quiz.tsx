@@ -8,7 +8,7 @@ import { collection, addDoc } from "firebase/firestore";
 // Import all quiz data
 import mosesQuizData from "../data/MosesQuiz.json";
 import josephQuizData from "../data/JosephQuiz.json";
-// import adamQuizData from "../data/AdamQuiz.json";
+import adamQuizData from "../data/AdamQuiz.json";
 // import abrahamQuizData from "../data/AbrahamQuiz.json";
 // import davidQuizData from "../data/DavidQuiz.json";
 // import noahQuizData from "../data/NoahQuiz.json";
@@ -25,7 +25,7 @@ type QuizItem = {
 const quizMap: { [key: string]: QuizItem[] } = {
   moses: mosesQuizData,
   joseph: josephQuizData,
-  // adam: adamQuizData,
+  adam: adamQuizData,
   // abraham: abrahamQuizData,
   // david: davidQuizData,
   // noah: noahQuizData,

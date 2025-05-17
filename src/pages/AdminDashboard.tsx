@@ -27,7 +27,6 @@ const AdminDashboard = () => {
         const usersList: User[] = [];
         querySnapshot.forEach((docSnap) => {
           const data = docSnap.data();
-          console.log("Fetched user:", data); // For debugging
           usersList.push({ id: docSnap.id, ...data } as User);
         });
         setUsers(usersList);

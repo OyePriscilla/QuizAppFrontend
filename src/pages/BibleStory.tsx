@@ -12,7 +12,7 @@ const BibleStory: React.FC = () => {
     <div className="min-h-screen flex bg-gradient-to-br from-pink-100 via-purple-100 to-blue-100">
       {/* Sidebar for larger screens */}
       <aside
-        className={`w-64 bg-white shadow-md p-6 hidden md:block ${
+        className={` w-64 bg-white shadow-md p-6 hidden md:block ${
           sidebarOpen ? "block" : "hidden"
         }`}
       >
@@ -240,5 +240,50 @@ But one brave mother hid her baby for three months. When she couldn’t hide him
         content: `Joseph invited his whole family to live in Egypt. Jacob saw his son again 💕. Joseph stayed faithful and said, “You meant it for harm, but God used it for good.” 🌟`,
       },
     ],
+  },
+  {
+    name: "Adam",
+    sections: [
+      {
+        title: "🐍🍎 The Sneaky Snake",
+        scripture: "📖 Genesis 3:1–5",
+        content: "A crafty serpent 🐍 came to Eve and asked, “Did God really say you can’t eat from any tree?” He twisted God’s words and made her question the truth 😕. He promised she would be like God if she ate the fruit 🍎, knowing good and evil 😯. The serpent sowed doubt and temptation."
+      },
+      {
+        title: "👫🍏 The First Bite",
+        scripture: "📖 Genesis 3:6–7",
+        content: "Eve looked at the fruit—it was beautiful, tasty, and promised wisdom 🌟. She ate it and shared it with Adam 👫. Suddenly, they felt shame. They realized they were naked and tried to cover themselves with fig leaves 🍃. Their innocence was gone, and guilt entered the world 😔."
+      },
+      {
+        title: "🌳👣 Hiding from God",
+        scripture: "📖 Genesis 3:8–13",
+        content: "God came walking in the garden 🌳 in the cool of the day. Adam and Eve hid from Him 😨. God called, “Where are you?” Adam said he was afraid because he was naked. God asked, “Who told you that?” Then came blame—Adam blamed Eve, and Eve blamed the serpent 🗣️. Sin had broken trust."
+      },
+      {
+        title: "⚖️🐍 God’s Judgment",
+        scripture: "📖 Genesis 3:14–19",
+        content: "God spoke justice. He cursed the serpent to crawl forever 🐍. He said there would be hostility between the serpent and the woman’s offspring 🧬—a hint of future hope. Eve would face pain in childbirth 😣, and Adam would have to work hard for his food 🌾. The ground itself would be cursed. Sin brought sorrow into creation 😢."
+      },
+      {
+        title: "👕🌍 Out of the Garden",
+        scripture: "📖 Genesis 3:20–24",
+        content: "God named the woman Eve, meaning ‘life,’ because she would become the mother of all living 🌱. He made clothes from animal skins for them 👕—a sign of His care, even in judgment. Then He sent them out of Eden 🌍 and placed a mighty angel with a flaming sword 🔥⚔️ to guard the tree of life. They were separated from paradise, but not from God's love 💔➡️❤️."
+      },
+      {
+        title: "🔮🌟 A Promise of Hope",
+        scripture: "📖 Genesis 3:15",
+        content: "Even in the middle of the punishment, God made a promise—a child would one day crush the serpent’s head 🐍👣. This was the first hint of Jesus, the Savior who would defeat sin and death 🙏✝️. From the very beginning, God had a rescue plan 💡❤️."
+      },
+      {
+        title: "🧭💭 Life After Eden",
+        scripture: "📖 Reflection from Genesis 3",
+        content: "Adam and Eve had to begin a new life outside Eden, full of hard work, sorrow, and change 🛤️. But God didn’t abandon them. He still watched over them. This story reminds us that even when we fall, God’s mercy and hope remain 🌈. The journey of redemption had begun."
+      },
+      {
+        "title": "💌 Message for the Children",
+        "scripture": "📖 From Genesis 3",
+        "content": "Sometimes we make wrong choices, just like Adam and Eve did 😔. But God still loves us very much ❤️. He wants us to be honest, say sorry, and try again. Even when we mess up, God has a plan to help us and bring us back to Him 🌈. Jesus is part of that beautiful plan! So remember: God’s love never gives up on you 💫."
+      }
+    ]
   },
 ];

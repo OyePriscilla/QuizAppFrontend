@@ -15,6 +15,7 @@ const AdminLogin = () => {
 
     if (username === hardcodedUsername && password === hardcodedPassword) {
       setMessage("Login successful!");
+      localStorage.setItem("isAdmin", "true"); // for admin
       navigate("/admin/dashboard"); // Redirect to admin dashboard
     } else {
       setMessage("Invalid username or password");

@@ -14,7 +14,7 @@ const characters = [
 ];
 
 // Only characters with available quizzes
-const availableQuizzes = ["Moses", "Joseph"];
+const availableQuizzes = ["Moses", "Joseph", "Adam"];
 
 const SelectQuiz = () => {
   const navigate = useNavigate();
