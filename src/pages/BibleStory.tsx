@@ -282,7 +282,7 @@ But one brave mother hid her baby for three months. When she couldn’t hide him
       {
         "title": "💌 Message for the Children",
         "scripture": "📖 From Genesis 3",
-        "content": "Sometimes we make wrong choices, just like Adam and Eve did 😔. But God still loves us very much ❤️. He wants us to be honest, say sorry, and try again. Even when we mess up, God has a plan to help us and bring us back to Him 🌈. Jesus is part of that beautiful plan! So remember: God’s love never gives up on you 💫."
+        "content": "Sometimes we make wrong choices, just like Adam and Eve did 😔. But God still loves us very much ❤️. He wants us to be honest, say sorry, and try again. Even when we mess up, God has a plan to help us and bring us back to Him 🌈. Jesus is part of that beautiful plan! So remember: God’s love never gives up on you while still living 💫."
       }
     ]
   },
