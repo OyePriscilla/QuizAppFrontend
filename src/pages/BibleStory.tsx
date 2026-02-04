@@ -125,7 +125,7 @@ const characters = [
   { name: "David" },
   { name: "Noah" },
   { name: "Peter" },
-  { name: "TACN History" },
+  { name: "TACN-History" },
 ];
 
 // Stories Data
@@ -288,7 +288,7 @@ But one brave mother hid her baby for three months. When she couldn’t hide him
     ]
   },
   {
-  "name": "The Apostolic Church Nigeria (TACN)",
+  "name": "TACN-History",
   "sections": [
     {
       "title": "🌱⛪ The Beginning: The Precious Stone Society",
