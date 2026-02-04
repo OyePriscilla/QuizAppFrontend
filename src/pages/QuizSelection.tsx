@@ -11,6 +11,8 @@ const characters = [
   { name: "Noah", emoji: "🛶" },
   { name: "Peter", emoji: "🎣" },
   { name: "Paul", emoji: "✝️" },
+  { name: "TACN-History", emoji: "✝️" },
+  
 ];
 
 // Only characters with available quizzes
