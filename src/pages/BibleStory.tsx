@@ -125,6 +125,7 @@ const characters = [
   { name: "David" },
   { name: "Noah" },
   { name: "Peter" },
+  { name: "TACN History" },
 ];
 
 // Stories Data
