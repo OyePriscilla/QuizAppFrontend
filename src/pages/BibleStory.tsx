@@ -287,4 +287,87 @@ But one brave mother hid her baby for three months. When she couldn’t hide him
       }
     ]
   },
+  {
+  "name": "The Apostolic Church Nigeria (TACN)",
+  "sections": [
+    {
+      "title": "🌱⛪ The Beginning: The Precious Stone Society",
+      "years": "1918",
+      "scripture": "",
+      "content": "In 1918, during the global influenza pandemic, a small prayer group emerged within the Anglican Church in Lagos. Led by Joseph Shadare and Sophia Odunlami, the group emphasized holiness, fervent prayer, divine healing, and reliance on the Holy Spirit. Their practices conflicted with Anglican traditions, leading to separation. This group became known as the Precious Stone Society, later called the Diamond Society."
+    },
+    {
+      "title": "🤝📜 Affiliation with Faith Tabernacle (USA)",
+      "years": "1922",
+      "scripture": "",
+      "content": "Seeking doctrinal guidance and external support, the Precious Stone Society affiliated with the Faith Tabernacle Congregation of Philadelphia, USA. The affiliation strengthened teachings on repentance, sanctification, baptism by immersion, and divine healing."
+    },
+    {
+      "title": "🔥🌍 The Great Revival at Oke-Oye, Ilesa",
+      "years": "1930",
+      "scripture": "",
+      "content": "In 1930, a powerful revival broke out at Oke-Oye, Ilesa, led by Evangelist Joseph Ayo Babalola. Miracles, mass repentance, and deliverance followed. Shrines were destroyed, and many turned fully to Christianity. The revival spread rapidly across Nigeria and drew attention from British colonial authorities."
+    },
+    {
+      "title": "🇬🇧✈️ British Missionaries Arrive",
+      "years": "1931",
+      "scripture": "",
+      "content": "On September 23, 1931, missionaries from The Apostolic Church, Bradford, UK—D.P. Williams, Andrew Turnbull, and W.J. Williams—arrived in Nigeria. Their presence brought legal protection, doctrinal clarity, and church structure under colonial law."
+    },
+    {
+      "title": "📛📖 Adoption of the Name The Apostolic Church",
+      "years": "1931",
+      "scripture": "",
+      "content": "In November 1931, the Nigerian movement adopted the name The Apostolic Church. Indigenous leaders including D.O. Odubanjo and I.B. Akinyele were ordained as pastors, formally establishing the church in Nigeria."
+    },
+    {
+      "title": "⚠️✂️ How Christ Apostolic Church (CAC) Emerged",
+      "years": "1939–1940",
+      "scripture": "",
+      "content": "As the church grew, tension arose over the doctrine of healing. British missionaries believed medicine could be used alongside prayer, calling it a gift from God. Indigenous revival leaders such as Joseph Ayo Babalola and I.B. Akinyele insisted on absolute divine healing without medicine. This disagreement led to a split in 1940. Those who followed Babalola formed the Christ Apostolic Church (CAC), while those who remained loyal to Apostolic governance continued as The Apostolic Church Nigeria (TACN)."
+    },
+    {
+      "title": "🕊️🧱 Those Who Stayed: Strengthening TACN",
+      "years": "1940–1945",
+      "scripture": "",
+      "content": "After the split, TACN faced reduced numbers but gained stronger unity and structure. Pastor S.G. Adegboyega emerged as a key stabilizing leader. Emphasis was placed on discipline, order, doctrinal consistency, and organized administration."
+    },
+    {
+      "title": "🏗️🌍 Birth and Growth of LAWNA Territory",
+      "years": "1945–1970",
+      "scripture": "",
+      "content": "The Lagos and Western/Northern Areas (LAWNA) Territory was formed to manage the rapidly growing work in Lagos, the West, and Northern Nigeria. Under the leadership of Pastor S.G. Adegboyega, LAWNA became known for strong leadership training, sound doctrine, evangelism, and church planting. Assemblies spread into urban centers, rural towns, and northern regions."
+    },
+    {
+      "title": "📖👥 Early LAWNA Stories of Growth",
+      "years": "1950–1980",
+      "scripture": "",
+      "content": "Early LAWNA pastors often traveled long distances by foot or bicycle to plant churches. Assemblies met under trees, in schools, and in family compounds. Strong emphasis was placed on prayer meetings, Bible teaching, discipline, and unity. LAWNA became the backbone of TACN’s numerical and administrative strength."
+    },
+    {
+      "title": "🗺️🏛️ Territorial Expansion Nationwide",
+      "years": "1970–2000",
+      "scripture": "",
+      "content": "Following LAWNA’s success, other territories were strengthened, including Igboland, Akwa Ibom, Cross River, and Maritime. Each territory adopted the Apostolic administrative model while adapting to local cultures."
+    },
+    {
+      "title": "🏛️✨ The National Temple",
+      "years": "2011",
+      "scripture": "",
+      "content": "In 2011, TACN dedicated the National Temple at Olorunda, Ketu, Lagos. Seating about 100,000 worshippers, it became a symbol of unity, sacrifice, and national presence."
+    },
+    {
+      "title": "🔄👥 Generational Leadership Transition",
+      "years": "2025",
+      "scripture": "",
+      "content": "In August 2025, a historic leadership transition occurred. Pastor (Dr.) Lawrence Oladele became National President, leading a new generation of leaders focused on reform, digital transformation, youth inclusion, and transparency."
+    },
+    {
+      "title": "🌍🚀 TACN Today",
+      "years": "2026",
+      "scripture": "",
+      "content": "Today, TACN stands firm as a Classical Pentecostal church rooted in Apostolic doctrine. Through the RAISE initiative—Reviving Apostolic Identity and Standards through Empowerment—the church continues to impact Nigeria spiritually, socially, and nationally."
+    },
+  ]
+},
 ];
