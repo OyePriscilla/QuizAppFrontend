@@ -1,0 +1,402 @@
+[
+  {
+    "question": "What does a thief come to do?",
+    "options": [
+      "Teach and heal",
+      "Steal, kill, and destroy",
+      "Feed sheep",
+      "Open doors"
+    ],
+    "answer": "Steal, kill, and destroy"
+  },
+  {
+    "question": "What did Jesus call Himself in relation to the sheep?",
+    "options": [
+      "The gate",
+      "The stone",
+      "The ladder",
+      "The lamp"
+    ],
+    "answer": "The gate"
+  },
+  {
+    "question": "What did Jesus call Himself in John 10?",
+    "options": [
+      "The good shepherd",
+      "The bread",
+      "The vine",
+      "The light"
+    ],
+    "answer": "The good shepherd"
+  },
+  {
+    "question": "What does the good shepherd do for the sheep?",
+    "options": [
+      "Counts them",
+      "Lays down his life",
+      "Sells them",
+      "Leaves them"
+    ],
+    "answer": "Lays down his life"
+  },
+  {
+    "question": "How do the sheep respond to the shepherd's voice?",
+    "options": [
+      "They ignore it",
+      "They know it",
+      "They fear it",
+      "They debate it"
+    ],
+    "answer": "They know it"
+  },
+  {
+    "question": "What kind of life does Jesus give His sheep?",
+    "options": [
+      "A long earthly life",
+      "Eternal life",
+      "A kingly life",
+      "A rich life"
+    ],
+    "answer": "Eternal life"
+  },
+  {
+    "question": "What feast is mentioned later in John 10?",
+    "options": [
+      "Passover",
+      "Dedication",
+      "Tabernacles",
+      "Pentecost"
+    ],
+    "answer": "Dedication"
+  },
+  {
+    "question": "Where was Jesus walking at the Feast of Dedication?",
+    "options": [
+      "Solomon's porch",
+      "The upper room",
+      "The garden",
+      "The sea"
+    ],
+    "answer": "Solomon's porch"
+  },
+  {
+    "question": "What did Jesus say about His relationship with the Father?",
+    "options": [
+      "We are friends",
+      "I and My Father are one",
+      "He is greater but far away",
+      "I only obey"
+    ],
+    "answer": "I and My Father are one"
+  },
+  {
+    "question": "What did the Jews try to do after this statement?",
+    "options": [
+      "Make Him king",
+      "Stone Him",
+      "Follow Him",
+      "Arrest Pilate"
+    ],
+    "answer": "Stone Him"
+  },
+  {
+    "question": "To which man did Jesus refer, saying he heard God's word in Scripture?",
+    "options": [
+      "Isaiah",
+      "Moses",
+      "those called gods",
+      "David"
+    ],
+    "answer": "those called gods"
+  },
+  {
+    "question": "Where did Jesus go beyond the Jordan?",
+    "options": [
+      "Where John first baptized",
+      "Bethany",
+      "Nazareth",
+      "Capernaum"
+    ],
+    "answer": "Where John first baptized"
+  },
+  {
+    "question": "What did many people say about John there?",
+    "options": [
+      "He did no sign",
+      "He was a king",
+      "He was rich",
+      "He was a priest"
+    ],
+    "answer": "He did no sign"
+  },
+  {
+    "question": "What did many do there because of Jesus?",
+    "options": [
+      "Left",
+      "Believed in Him",
+      "Argued",
+      "Hid"
+    ],
+    "answer": "Believed in Him"
+  },
+  {
+    "question": "Who was sick in John 11?",
+    "options": [
+      "Lazarus",
+      "Thomas",
+      "Philip",
+      "Zacchaeus"
+    ],
+    "answer": "Lazarus"
+  },
+  {
+    "question": "In what village did Lazarus live?",
+    "options": [
+      "Bethany",
+      "Bethlehem",
+      "Cana",
+      "Jericho"
+    ],
+    "answer": "Bethany"
+  },
+  {
+    "question": "Which sisters sent word to Jesus?",
+    "options": [
+      "Ruth and Naomi",
+      "Mary and Martha",
+      "Leah and Rachel",
+      "Joanna and Susanna"
+    ],
+    "answer": "Mary and Martha"
+  },
+  {
+    "question": "How many days had Lazarus been in the tomb when Jesus came?",
+    "options": [
+      "Two",
+      "Three",
+      "Four",
+      "Seven"
+    ],
+    "answer": "Four"
+  },
+  {
+    "question": "Who said, 'Lord, if You had been here, my brother would not have died'?",
+    "options": [
+      "Martha only",
+      "Mary only",
+      "Both Martha and Mary",
+      "Peter"
+    ],
+    "answer": "Both Martha and Mary"
+  },
+  {
+    "question": "What did Jesus say He is in John 11?",
+    "options": [
+      "The resurrection and the life",
+      "The gate",
+      "The vine",
+      "The prophet"
+    ],
+    "answer": "The resurrection and the life"
+  },
+  {
+    "question": "What is the shortest verse in John 11?",
+    "options": [
+      "Jesus wept",
+      "Come forth",
+      "Take away the stone",
+      "Believe in Me"
+    ],
+    "answer": "Jesus wept"
+  },
+  {
+    "question": "What did Jesus tell them to remove from the tomb?",
+    "options": [
+      "A lamp",
+      "The stone",
+      "The spices",
+      "The door"
+    ],
+    "answer": "The stone"
+  },
+  {
+    "question": "What did Jesus cry with a loud voice?",
+    "options": [
+      "Arise and shine",
+      "Lazarus, come forth",
+      "Be healed",
+      "Open the grave"
+    ],
+    "answer": "Lazarus, come forth"
+  },
+  {
+    "question": "What came out from the tomb?",
+    "options": [
+      "A spirit",
+      "Lazarus bound hand and foot",
+      "Only cloths",
+      "An angel"
+    ],
+    "answer": "Lazarus bound hand and foot"
+  },
+  {
+    "question": "Who gave advice that one man should die for the people?",
+    "options": [
+      "Annas",
+      "Caiaphas",
+      "Pilate",
+      "Nicodemus"
+    ],
+    "answer": "Caiaphas"
+  },
+  {
+    "question": "To what town did Jesus go afterward near the wilderness?",
+    "options": [
+      "Emmaus",
+      "Ephraim",
+      "Jericho",
+      "Sychar"
+    ],
+    "answer": "Ephraim"
+  },
+  {
+    "question": "Why did many of the Jews believe in Jesus after this sign?",
+    "options": [
+      "Because they saw what He did",
+      "Because of a dream",
+      "Because of the priests",
+      "Because of Rome"
+    ],
+    "answer": "Because they saw what He did"
+  },
+  {
+    "question": "Who anointed Jesus' feet with costly oil?",
+    "options": [
+      "Martha",
+      "Mary",
+      "Salome",
+      "Joanna"
+    ],
+    "answer": "Mary"
+  },
+  {
+    "question": "What did Mary wipe Jesus' feet with?",
+    "options": [
+      "A cloth",
+      "Her hair",
+      "Water",
+      "A towel"
+    ],
+    "answer": "Her hair"
+  },
+  {
+    "question": "Who complained about the costly perfume?",
+    "options": [
+      "Peter",
+      "Judas Iscariot",
+      "Thomas",
+      "Andrew"
+    ],
+    "answer": "Judas Iscariot"
+  },
+  {
+    "question": "Into what city did Jesus enter riding a young donkey?",
+    "options": [
+      "Bethany",
+      "Jerusalem",
+      "Jericho",
+      "Nazareth"
+    ],
+    "answer": "Jerusalem"
+  },
+  {
+    "question": "What did the crowd wave?",
+    "options": [
+      "Swords",
+      "Palm branches",
+      "Torches",
+      "Crowns"
+    ],
+    "answer": "Palm branches"
+  },
+  {
+    "question": "What did the people cry out as Jesus entered?",
+    "options": [
+      "Hallelujah",
+      "Hosanna",
+      "Maranatha",
+      "Amen"
+    ],
+    "answer": "Hosanna"
+  },
+  {
+    "question": "Who wanted to see Jesus in John 12?",
+    "options": [
+      "Romans",
+      "Some Greeks",
+      "Samaritans",
+      "Tax collectors"
+    ],
+    "answer": "Some Greeks"
+  },
+  {
+    "question": "What must happen to a grain of wheat to bear much fruit?",
+    "options": [
+      "Be hidden",
+      "Fall into the ground and die",
+      "Be washed",
+      "Be burned"
+    ],
+    "answer": "Fall into the ground and die"
+  },
+  {
+    "question": "What voice came from heaven after Jesus prayed?",
+    "options": [
+      "I have glorified it, and will glorify it again",
+      "This is My Son",
+      "Peace be still",
+      "Come up here"
+    ],
+    "answer": "I have glorified it, and will glorify it again"
+  },
+  {
+    "question": "Who did many rulers fear to confess because of the Pharisees?",
+    "options": [
+      "John",
+      "Jesus",
+      "themselves as believers in Him",
+      "Lazarus"
+    ],
+    "answer": "themselves as believers in Him"
+  },
+  {
+    "question": "What did they love more than the praise of God?",
+    "options": [
+      "Money",
+      "The praise of men",
+      "Power",
+      "Food"
+    ],
+    "answer": "The praise of men"
+  },
+  {
+    "question": "What did Jesus say He came as into the world?",
+    "options": [
+      "A judge only",
+      "A light",
+      "A king only",
+      "A soldier"
+    ],
+    "answer": "A light"
+  },
+  {
+    "question": "What will judge people in the last day, according to Jesus?",
+    "options": [
+      "Moses only",
+      "The word He has spoken",
+      "The temple",
+      "Angels"
+    ],
+    "answer": "The word He has spoken"
+  }
+]

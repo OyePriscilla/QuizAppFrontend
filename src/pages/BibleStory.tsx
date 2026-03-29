@@ -10,9 +10,9 @@ const BibleStory: React.FC = () => {
 
   return (
     <div className="min-h-screen flex bg-gradient-to-br from-pink-100 via-purple-100 to-blue-100">
-      {/* Sidebar for larger screens */}
+      {/* Sidebar for desktop */}
       <aside
-        className={` w-64 bg-white shadow-md p-6 hidden md:block ${
+        className={`w-64 bg-white shadow-md p-6 hidden md:block ${
           sidebarOpen ? "block" : "hidden"
         }`}
       >
@@ -37,15 +37,15 @@ const BibleStory: React.FC = () => {
         </ul>
       </aside>
 
-      {/* Mobile Sidebar Toggle */}
+      {/* Mobile sidebar toggle */}
       <button
-        className="md:hidden p-2 bg-purple-700 text-white fixed top-50 left-4 z-110 rounded shadow-lg"
+        className="md:hidden p-2 bg-purple-700 text-white fixed top-20 left-4 z-110 rounded shadow-lg"
         onClick={() => setSidebarOpen(!sidebarOpen)}
       >
         ☰
       </button>
 
-      {/* Main Story Content */}
+      {/* Main content */}
       <main className="flex-1 p-6">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl font-bold text-center text-purple-700 mb-6">
@@ -81,14 +81,14 @@ const BibleStory: React.FC = () => {
         </div>
       </main>
 
-      {/* Sidebar for mobile screens */}
+      {/* Mobile sidebar */}
       <div
         className={`fixed top-44 left-0 h-full bg-white shadow-md p-6 w-64 z-20 transition-transform transform ${
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
         } md:hidden`}
       >
-        <h2 className="text-2xl font-bold text-purple-700 mb-6 text-center ml-8">
-           Characters
+        <h2 className="text-2xl font-bold text-purple-700 mb-6 text-center">
+          Characters
         </h2>
         <ul className="space-y-4">
           {characters.map((character) => (
@@ -114,18 +114,16 @@ const BibleStory: React.FC = () => {
   );
 };
 
+
 export default BibleStory;
 
 // Character List
 const characters = [
   { name: "Moses" },
   { name: "Joseph" },
-  { name: "Adam" },
-  { name: "Abraham" },
-  { name: "David" },
-  { name: "Noah" },
-  { name: "Peter" },
+  { name: "Adam" }, 
   { name: "TACN-History" },
+  { name: "John" },
 ];
 
 // Stories Data
@@ -288,86 +286,126 @@ But one brave mother hid her baby for three months. When she couldn’t hide him
     ]
   },
   {
-  "name": "TACN-History",
-  "sections": [
-    {
-      "title": "🌱⛪ The Beginning: The Precious Stone Society",
-      "years": "1918",
-      "scripture": "",
-      "content": "In 1918, during the global influenza pandemic, a small prayer group emerged within the Anglican Church in Lagos. Led by Joseph Shadare and Sophia Odunlami, the group emphasized holiness, fervent prayer, divine healing, and reliance on the Holy Spirit. Their practices conflicted with Anglican traditions, leading to separation. This group became known as the Precious Stone Society, later called the Diamond Society."
-    },
-    {
-      "title": "🤝📜 Affiliation with Faith Tabernacle (USA)",
-      "years": "1922",
-      "scripture": "",
-      "content": "Seeking doctrinal guidance and external support, the Precious Stone Society affiliated with the Faith Tabernacle Congregation of Philadelphia, USA. The affiliation strengthened teachings on repentance, sanctification, baptism by immersion, and divine healing."
-    },
-    {
-      "title": "🔥🌍 The Great Revival at Oke-Oye, Ilesa",
-      "years": "1930",
-      "scripture": "",
-      "content": "In 1930, a powerful revival broke out at Oke-Oye, Ilesa, led by Evangelist Joseph Ayo Babalola. Miracles, mass repentance, and deliverance followed. Shrines were destroyed, and many turned fully to Christianity. The revival spread rapidly across Nigeria and drew attention from British colonial authorities."
-    },
-    {
-      "title": "🇬🇧✈️ British Missionaries Arrive",
-      "years": "1931",
-      "scripture": "",
-      "content": "On September 23, 1931, missionaries from The Apostolic Church, Bradford, UK—D.P. Williams, Andrew Turnbull, and W.J. Williams—arrived in Nigeria. Their presence brought legal protection, doctrinal clarity, and church structure under colonial law."
-    },
-    {
-      "title": "📛📖 Adoption of the Name The Apostolic Church",
-      "years": "1931",
-      "scripture": "",
-      "content": "In November 1931, the Nigerian movement adopted the name The Apostolic Church. Indigenous leaders including D.O. Odubanjo and I.B. Akinyele were ordained as pastors, formally establishing the church in Nigeria."
-    },
-    {
-      "title": "⚠️✂️ How Christ Apostolic Church (CAC) Emerged",
-      "years": "1939–1940",
-      "scripture": "",
-      "content": "As the church grew, tension arose over the doctrine of healing. British missionaries believed medicine could be used alongside prayer, calling it a gift from God. Indigenous revival leaders such as Joseph Ayo Babalola and I.B. Akinyele insisted on absolute divine healing without medicine. This disagreement led to a split in 1940. Those who followed Babalola formed the Christ Apostolic Church (CAC), while those who remained loyal to Apostolic governance continued as The Apostolic Church Nigeria (TACN)."
-    },
-    {
-      "title": "🕊️🧱 Those Who Stayed: Strengthening TACN",
-      "years": "1940–1945",
-      "scripture": "",
-      "content": "After the split, TACN faced reduced numbers but gained stronger unity and structure. Pastor S.G. Adegboyega emerged as a key stabilizing leader. Emphasis was placed on discipline, order, doctrinal consistency, and organized administration."
-    },
-    {
-      "title": "🏗️🌍 Birth and Growth of LAWNA Territory",
-      "years": "1945–1970",
-      "scripture": "",
-      "content": "The Lagos and Western/Northern Areas (LAWNA) Territory was formed to manage the rapidly growing work in Lagos, the West, and Northern Nigeria. Under the leadership of Pastor S.G. Adegboyega, LAWNA became known for strong leadership training, sound doctrine, evangelism, and church planting. Assemblies spread into urban centers, rural towns, and northern regions."
-    },
-    {
-      "title": "📖👥 Early LAWNA Stories of Growth",
-      "years": "1950–1980",
-      "scripture": "",
-      "content": "Early LAWNA pastors often traveled long distances by foot or bicycle to plant churches. Assemblies met under trees, in schools, and in family compounds. Strong emphasis was placed on prayer meetings, Bible teaching, discipline, and unity. LAWNA became the backbone of TACN’s numerical and administrative strength."
-    },
-    {
-      "title": "🗺️🏛️ Territorial Expansion Nationwide",
-      "years": "1970–2000",
-      "scripture": "",
-      "content": "Following LAWNA’s success, other territories were strengthened, including Igboland, Akwa Ibom, Cross River, and Maritime. Each territory adopted the Apostolic administrative model while adapting to local cultures."
-    },
-    {
-      "title": "🏛️✨ The National Temple",
-      "years": "2011",
-      "scripture": "",
-      "content": "In 2011, TACN dedicated the National Temple at Olorunda, Ketu, Lagos. Seating about 100,000 worshippers, it became a symbol of unity, sacrifice, and national presence."
-    },
-    {
-      "title": "🔄👥 Generational Leadership Transition",
-      "years": "2025",
-      "scripture": "",
-      "content": "In August 2025, a historic leadership transition occurred. Pastor (Dr.) Lawrence Oladele became National President, leading a new generation of leaders focused on reform, digital transformation, youth inclusion, and transparency."
-    },
-    {
-      "title": "🌍🚀 TACN Today",
-      "years": "2026",
-      "scripture": "",
-      "content": "Today, TACN stands firm as a Classical Pentecostal church rooted in Apostolic doctrine. Through the RAISE initiative—Reviving Apostolic Identity and Standards through Empowerment—the church continues to impact Nigeria spiritually, socially, and nationally."
-    },
-  ]
-},
+    "name": "TACN-History",
+    "sections": [
+      {
+        "title": "🌱⛪ The Beginning: The Precious Stone Society",
+        "years": "1918",
+        "scripture": "",
+        "content": "In 1918, during the global influenza pandemic, a small prayer group emerged within the Anglican Church in Lagos. Led by Joseph Shadare and Sophia Odunlami, the group emphasized holiness, fervent prayer, divine healing, and reliance on the Holy Spirit. Their practices conflicted with Anglican traditions, leading to separation. This group became known as the Precious Stone Society, later called the Diamond Society."
+      },
+      {
+        "title": "🤝📜 Affiliation with Faith Tabernacle (USA)",
+        "years": "1922",
+        "scripture": "",
+        "content": "Seeking doctrinal guidance and external support, the Precious Stone Society affiliated with the Faith Tabernacle Congregation of Philadelphia, USA. The affiliation strengthened teachings on repentance, sanctification, baptism by immersion, and divine healing."
+      },
+      {
+        "title": "🔥🌍 The Great Revival at Oke-Oye, Ilesa",
+        "years": "1930",
+        "scripture": "",
+        "content": "In 1930, a powerful revival broke out at Oke-Oye, Ilesa, led by Evangelist Joseph Ayo Babalola. Miracles, mass repentance, and deliverance followed. Shrines were destroyed, and many turned fully to Christianity. The revival spread rapidly across Nigeria and drew attention from British colonial authorities."
+      },
+      {
+        "title": "🇬🇧✈️ British Missionaries Arrive",
+        "years": "1931",
+        "scripture": "",
+        "content": "On September 23, 1931, missionaries from The Apostolic Church, Bradford, UK—D.P. Williams, Andrew Turnbull, and W.J. Williams—arrived in Nigeria. Their presence brought legal protection, doctrinal clarity, and church structure under colonial law."
+      },
+      {
+        "title": "📛📖 Adoption of the Name The Apostolic Church",
+        "years": "1931",
+        "scripture": "",
+        "content": "In November 1931, the Nigerian movement adopted the name The Apostolic Church. Indigenous leaders including D.O. Odubanjo and I.B. Akinyele were ordained as pastors, formally establishing the church in Nigeria."
+      },
+      {
+        "title": "⚠️✂️ How Christ Apostolic Church (CAC) Emerged",
+        "years": "1939–1940",
+        "scripture": "",
+        "content": "As the church grew, tension arose over the doctrine of healing. British missionaries believed medicine could be used alongside prayer, calling it a gift from God. Indigenous revival leaders such as Joseph Ayo Babalola and I.B. Akinyele insisted on absolute divine healing without medicine. This disagreement led to a split in 1940. Those who followed Babalola formed the Christ Apostolic Church (CAC), while those who remained loyal to Apostolic governance continued as The Apostolic Church Nigeria (TACN)."
+      },
+      {
+        "title": "🕊️🧱 Those Who Stayed: Strengthening TACN",
+        "years": "1940–1945",
+        "scripture": "",
+        "content": "After the split, TACN faced reduced numbers but gained stronger unity and structure. Pastor S.G. Adegboyega emerged as a key stabilizing leader. Emphasis was placed on discipline, order, doctrinal consistency, and organized administration."
+      },
+      {
+        "title": "🏗️🌍 Birth and Growth of LAWNA Territory",
+        "years": "1945–1970",
+        "scripture": "",
+        "content": "The Lagos and Western/Northern Areas (LAWNA) Territory was formed to manage the rapidly growing work in Lagos, the West, and Northern Nigeria. Under the leadership of Pastor S.G. Adegboyega, LAWNA became known for strong leadership training, sound doctrine, evangelism, and church planting. Assemblies spread into urban centers, rural towns, and northern regions."
+      },
+      {
+        "title": "📖👥 Early LAWNA Stories of Growth",
+        "years": "1950–1980",
+        "scripture": "",
+        "content": "Early LAWNA pastors often traveled long distances by foot or bicycle to plant churches. Assemblies met under trees, in schools, and in family compounds. Strong emphasis was placed on prayer meetings, Bible teaching, discipline, and unity. LAWNA became the backbone of TACN’s numerical and administrative strength."
+      },
+      {
+        "title": "🗺️🏛️ Territorial Expansion Nationwide",
+        "years": "1970–2000",
+        "scripture": "",
+        "content": "Following LAWNA’s success, other territories were strengthened, including Igboland, Akwa Ibom, Cross River, and Maritime. Each territory adopted the Apostolic administrative model while adapting to local cultures."
+      },
+      {
+        "title": "🏛️✨ The National Temple",
+        "years": "2011",
+        "scripture": "",
+        "content": "In 2011, TACN dedicated the National Temple at Olorunda, Ketu, Lagos. Seating about 100,000 worshippers, it became a symbol of unity, sacrifice, and national presence."
+      },
+      {
+        "title": "🔄👥 Generational Leadership Transition",
+        "years": "2025",
+        "scripture": "",
+        "content": "In August 2025, a historic leadership transition occurred. Pastor (Dr.) Lawrence Oladele became National President, leading a new generation of leaders focused on reform, digital transformation, youth inclusion, and transparency."
+      },
+      {
+        "title": "🌍🚀 TACN Today",
+        "years": "2026",
+        "scripture": "",
+        "content": "Today, TACN stands firm as a Classical Pentecostal church rooted in Apostolic doctrine. Through the RAISE initiative—Reviving Apostolic Identity and Standards through Empowerment—the church continues to impact Nigeria spiritually, socially, and nationally."
+      },
+    ]
+  },
+   {
+    name: "John",
+    sections: [
+      {
+        title: "John 1–3",
+        scripture: "📖 John 1–3",
+        content: `In the beginning was the Word, and the Word was with God, and the Word was God. John the Baptist came to prepare the way for Jesus. Jesus calls His first disciples.`,
+      },
+      {
+        title: "John 4–6",
+        scripture: "📖 John 4–6",
+        content: `Jesus meets the Samaritan woman at the well and teaches about living water. He heals the official's son and feeds 5000 people.`,
+      },
+      {
+        title: "John 7–9",
+        scripture: "📖 John 7–9",
+        content: `Jesus teaches at the Feast of Tabernacles. He heals a man born blind and explains spiritual sight.`,
+      },
+      {
+        title: "John 10–12",
+        scripture: "📖 John 10–12",
+        content: `Jesus proclaims He is the Good Shepherd. He raises Lazarus and enters Jerusalem triumphantly.`,
+      },
+      {
+        title: "John 13–15",
+        scripture: "📖 John 13–15",
+        content: `Jesus washes His disciples' feet. He gives the new commandment of love and speaks about the vine and branches.`,
+      },
+      {
+        title: "John 16–18",
+        scripture: "📖 John 16–18",
+        content: `Jesus comforts His disciples, warns about persecution, prays in Gethsemane, and is betrayed and arrested.`,
+      },
+      {
+        title: "John 19–21",
+        scripture: "📖 John 19–21",
+        content: `The crucifixion and resurrection of Jesus. He appears to His disciples and commissions them to continue His work.`,
+      },
+    ],
+  },
 ];

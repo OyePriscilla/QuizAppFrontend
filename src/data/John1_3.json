@@ -1,0 +1,402 @@
+[
+  {
+    "question": "Who was with God in the beginning?",
+    "options": [
+      "Moses",
+      "The Word",
+      "John",
+      "Elijah"
+    ],
+    "answer": "The Word"
+  },
+  {
+    "question": "What was the Word according to John 1?",
+    "options": [
+      "A prophet",
+      "An angel",
+      "God",
+      "A king"
+    ],
+    "answer": "God"
+  },
+  {
+    "question": "Through whom were all things made?",
+    "options": [
+      "Moses",
+      "The Word",
+      "Abraham",
+      "David"
+    ],
+    "answer": "The Word"
+  },
+  {
+    "question": "Who was sent from God to bear witness of the Light?",
+    "options": [
+      "Peter",
+      "John the Baptist",
+      "Andrew",
+      "Philip"
+    ],
+    "answer": "John the Baptist"
+  },
+  {
+    "question": "What did John the Baptist say he was not?",
+    "options": [
+      "A prophet",
+      "The Christ",
+      "A priest",
+      "A teacher"
+    ],
+    "answer": "The Christ"
+  },
+  {
+    "question": "What did John the Baptist call Jesus?",
+    "options": [
+      "The Good Shepherd",
+      "The Lamb of God",
+      "The Bread of Life",
+      "The Vine"
+    ],
+    "answer": "The Lamb of God"
+  },
+  {
+    "question": "Which two disciples first followed Jesus after hearing John speak?",
+    "options": [
+      "Peter and James",
+      "Andrew and another disciple",
+      "Philip and Thomas",
+      "Matthew and John"
+    ],
+    "answer": "Andrew and another disciple"
+  },
+  {
+    "question": "Who did Andrew bring to Jesus?",
+    "options": [
+      "Philip",
+      "Peter",
+      "Nathanael",
+      "James"
+    ],
+    "answer": "Peter"
+  },
+  {
+    "question": "What new name did Jesus give Simon?",
+    "options": [
+      "Paul",
+      "Cephas",
+      "Boanerges",
+      "Thomas"
+    ],
+    "answer": "Cephas"
+  },
+  {
+    "question": "Who said, 'Can anything good come out of Nazareth?'",
+    "options": [
+      "Andrew",
+      "Nathanael",
+      "Peter",
+      "Thomas"
+    ],
+    "answer": "Nathanael"
+  },
+  {
+    "question": "Who told Nathanael to 'Come and see'?",
+    "options": [
+      "Jesus",
+      "John the Baptist",
+      "Philip",
+      "Andrew"
+    ],
+    "answer": "Philip"
+  },
+  {
+    "question": "What did Jesus say He saw Nathanael under?",
+    "options": [
+      "An olive tree",
+      "A fig tree",
+      "A palm tree",
+      "A cedar tree"
+    ],
+    "answer": "A fig tree"
+  },
+  {
+    "question": "What title did Nathanael give Jesus?",
+    "options": [
+      "Rabbi and Son of God",
+      "Prophet only",
+      "King of Rome",
+      "High Priest"
+    ],
+    "answer": "Rabbi and Son of God"
+  },
+  {
+    "question": "What would the disciples see ascending and descending on the Son of Man?",
+    "options": [
+      "Birds",
+      "Angels",
+      "Clouds",
+      "Sheep"
+    ],
+    "answer": "Angels"
+  },
+  {
+    "question": "Where was the wedding Jesus attended in John 2?",
+    "options": [
+      "Bethany",
+      "Cana",
+      "Jerusalem",
+      "Nazareth"
+    ],
+    "answer": "Cana"
+  },
+  {
+    "question": "Who told Jesus that the wedding feast had no wine?",
+    "options": [
+      "Martha",
+      "His mother",
+      "Mary Magdalene",
+      "A servant"
+    ],
+    "answer": "His mother"
+  },
+  {
+    "question": "What did Jesus turn into wine?",
+    "options": [
+      "Oil",
+      "Milk",
+      "Water",
+      "Juice"
+    ],
+    "answer": "Water"
+  },
+  {
+    "question": "How many waterpots were set there for purification?",
+    "options": [
+      "Two",
+      "Four",
+      "Six",
+      "Twelve"
+    ],
+    "answer": "Six"
+  },
+  {
+    "question": "Who knew where the good wine came from?",
+    "options": [
+      "The ruler of the feast and the servants",
+      "Only the guests",
+      "Only the disciples",
+      "No one"
+    ],
+    "answer": "The ruler of the feast and the servants"
+  },
+  {
+    "question": "What effect did Jesus' miracle at Cana have on His disciples?",
+    "options": [
+      "They left Him",
+      "They believed in Him",
+      "They were afraid of Him",
+      "They ignored Him"
+    ],
+    "answer": "They believed in Him"
+  },
+  {
+    "question": "To what city did Jesus go after the wedding at Cana?",
+    "options": [
+      "Bethlehem",
+      "Capernaum",
+      "Jericho",
+      "Emmaus"
+    ],
+    "answer": "Capernaum"
+  },
+  {
+    "question": "What did Jesus find in the temple?",
+    "options": [
+      "Only praying people",
+      "People selling oxen, sheep, and doves",
+      "A choir singing",
+      "Roman soldiers only"
+    ],
+    "answer": "People selling oxen, sheep, and doves"
+  },
+  {
+    "question": "What did Jesus make before driving people out of the temple?",
+    "options": [
+      "A robe",
+      "A whip of cords",
+      "A new table",
+      "A loaf of bread"
+    ],
+    "answer": "A whip of cords"
+  },
+  {
+    "question": "What did Jesus tell the dove sellers?",
+    "options": [
+      "Lower your prices",
+      "Take these things away",
+      "Come back tomorrow",
+      "Stay and listen"
+    ],
+    "answer": "Take these things away"
+  },
+  {
+    "question": "What did Jesus say the temple would be raised in three days?",
+    "options": [
+      "His body",
+      "The city wall",
+      "The ark",
+      "The altar"
+    ],
+    "answer": "His body"
+  },
+  {
+    "question": "How many years did the Jews say the temple had been in building?",
+    "options": [
+      "7 years",
+      "20 years",
+      "46 years",
+      "70 years"
+    ],
+    "answer": "46 years"
+  },
+  {
+    "question": "Why did Jesus not commit Himself to everyone in Jerusalem?",
+    "options": [
+      "He was tired",
+      "He knew all men",
+      "He wanted to leave quickly",
+      "He was hiding"
+    ],
+    "answer": "He knew all men"
+  },
+  {
+    "question": "Who came to Jesus by night?",
+    "options": [
+      "Joseph",
+      "Nicodemus",
+      "Thomas",
+      "Philip"
+    ],
+    "answer": "Nicodemus"
+  },
+  {
+    "question": "Nicodemus was a ruler of which people?",
+    "options": [
+      "Romans",
+      "Greeks",
+      "The Jews",
+      "Samaritans"
+    ],
+    "answer": "The Jews"
+  },
+  {
+    "question": "What did Jesus say a person must do to see the kingdom of God?",
+    "options": [
+      "Give money",
+      "Be born again",
+      "Fast 40 days",
+      "Travel to Jerusalem"
+    ],
+    "answer": "Be born again"
+  },
+  {
+    "question": "Nicodemus asked if a man can enter his mother's womb a second time. What was he confused about?",
+    "options": [
+      "Baptism",
+      "Being born again",
+      "Temple worship",
+      "Marriage"
+    ],
+    "answer": "Being born again"
+  },
+  {
+    "question": "What two things did Jesus mention about being born again?",
+    "options": [
+      "Fire and oil",
+      "Water and the Spirit",
+      "Milk and honey",
+      "Dust and breath"
+    ],
+    "answer": "Water and the Spirit"
+  },
+  {
+    "question": "What comparison did Jesus use for the Spirit?",
+    "options": [
+      "A river",
+      "The wind",
+      "A flame",
+      "A mountain"
+    ],
+    "answer": "The wind"
+  },
+  {
+    "question": "Who did Jesus say had ascended to heaven and come down from heaven?",
+    "options": [
+      "Elijah",
+      "The Son of Man",
+      "Moses",
+      "John"
+    ],
+    "answer": "The Son of Man"
+  },
+  {
+    "question": "What did Jesus say Moses lifted up in the wilderness?",
+    "options": [
+      "A rod",
+      "A serpent",
+      "A lamb",
+      "A stone"
+    ],
+    "answer": "A serpent"
+  },
+  {
+    "question": "According to John 3:16, what did God give?",
+    "options": [
+      "A prophet",
+      "His only begotten Son",
+      "A king",
+      "The law"
+    ],
+    "answer": "His only begotten Son"
+  },
+  {
+    "question": "Why was the Son sent into the world?",
+    "options": [
+      "To condemn the world",
+      "To save the world",
+      "To build a temple",
+      "To judge Israel only"
+    ],
+    "answer": "To save the world"
+  },
+  {
+    "question": "Why do some people avoid the light?",
+    "options": [
+      "They are sleepy",
+      "Their deeds are evil",
+      "They are poor",
+      "They are hungry"
+    ],
+    "answer": "Their deeds are evil"
+  },
+  {
+    "question": "Who said, 'He must increase, but I must decrease'?",
+    "options": [
+      "Peter",
+      "John the Baptist",
+      "Andrew",
+      "Nicodemus"
+    ],
+    "answer": "John the Baptist"
+  },
+  {
+    "question": "What did John say the Father has given into the Son's hand?",
+    "options": [
+      "A book",
+      "All things",
+      "The temple",
+      "A crown"
+    ],
+    "answer": "All things"
+  }
+]

@@ -11,12 +11,13 @@ const characters = [
   { name: "Noah", emoji: "🛶" },
   { name: "Peter", emoji: "🎣" },
   { name: "Paul", emoji: "✝️" },
-  { name: "TACN-History", emoji: "✝️" },
-  
+  { name: "TACNHistory", emoji: "✝️" },
+  { name: "John", emoji: "✝️" },
+
 ];
 
 // Only characters with available quizzes
-const availableQuizzes = ["Moses", "Joseph", "Adam"];
+const availableQuizzes = ["Moses", "Joseph", "Adam", "TACNHistory", "John"];
 
 const SelectQuiz = () => {
   const navigate = useNavigate();
@@ -40,7 +41,7 @@ const SelectQuiz = () => {
         <p className="text-lg text-center text-purple-700 mb-6 font-semibold">
           Pick your hero and start the adventure!
         </p>
-        <h2 className="text-lg text-center bg-purple-800 text-white mb-6 font-semibold p-2 rounded"> Note: Quiz is only available for Moses' and Joseph's Characters.</h2>
+        <h2 className="text-lg text-center bg-purple-800 text-white mb-6 font-semibold p-2 rounded"> Note: Quiz is only available for Moses', Adam's and Joseph's Characters.</h2>
         {message && (
           <p className="mb-3 text-center text-red-600 font-bold">
             🚧 No quiz available for this Character yet. Kindly be patient while

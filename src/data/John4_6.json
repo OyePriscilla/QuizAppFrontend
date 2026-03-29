@@ -1,0 +1,402 @@
+[
+  {
+    "question": "Through what region did Jesus need to pass?",
+    "options": [
+      "Judea",
+      "Samaria",
+      "Galilee",
+      "Decapolis"
+    ],
+    "answer": "Samaria"
+  },
+  {
+    "question": "At what well did Jesus sit?",
+    "options": [
+      "Abraham's well",
+      "Jacob's well",
+      "Moses' well",
+      "David's well"
+    ],
+    "answer": "Jacob's well"
+  },
+  {
+    "question": "Who came to draw water at the well?",
+    "options": [
+      "A Jewish woman",
+      "A Samaritan woman",
+      "Mary",
+      "Martha"
+    ],
+    "answer": "A Samaritan woman"
+  },
+  {
+    "question": "What kind of water did Jesus offer the woman?",
+    "options": [
+      "Cold water",
+      "Living water",
+      "River water",
+      "Sweet water"
+    ],
+    "answer": "Living water"
+  },
+  {
+    "question": "How many husbands had the woman had?",
+    "options": [
+      "Three",
+      "Four",
+      "Five",
+      "Six"
+    ],
+    "answer": "Five"
+  },
+  {
+    "question": "Where did the woman say her fathers worshiped?",
+    "options": [
+      "Mount Gerizim",
+      "Jerusalem",
+      "Bethlehem",
+      "Nazareth"
+    ],
+    "answer": "Mount Gerizim"
+  },
+  {
+    "question": "What did Jesus say true worshipers worship in?",
+    "options": [
+      "Songs and dances",
+      "Spirit and truth",
+      "Silence only",
+      "Fasting only"
+    ],
+    "answer": "Spirit and truth"
+  },
+  {
+    "question": "What did the woman leave behind when she went into the city?",
+    "options": [
+      "Her shoes",
+      "Her waterpot",
+      "Her scarf",
+      "Her money"
+    ],
+    "answer": "Her waterpot"
+  },
+  {
+    "question": "What did the Samaritans call Jesus after hearing Him?",
+    "options": [
+      "King of Judah",
+      "Savior of the world",
+      "Chief priest",
+      "Great physician"
+    ],
+    "answer": "Savior of the world"
+  },
+  {
+    "question": "Who asked Jesus to heal his son?",
+    "options": [
+      "A soldier",
+      "A nobleman",
+      "A fisherman",
+      "A priest"
+    ],
+    "answer": "A nobleman"
+  },
+  {
+    "question": "Where was the nobleman's sick son?",
+    "options": [
+      "Capernaum",
+      "Cana",
+      "Bethany",
+      "Jerusalem"
+    ],
+    "answer": "Capernaum"
+  },
+  {
+    "question": "What did Jesus tell the nobleman?",
+    "options": [
+      "Bring him here",
+      "Go your way; your son lives",
+      "Wait till tomorrow",
+      "Pray harder"
+    ],
+    "answer": "Go your way; your son lives"
+  },
+  {
+    "question": "At what hour did the fever leave the boy?",
+    "options": [
+      "First hour",
+      "Seventh hour",
+      "Ninth hour",
+      "Twelfth hour"
+    ],
+    "answer": "Seventh hour"
+  },
+  {
+    "question": "This healing was the ___ sign Jesus did after coming from Judea to Galilee.",
+    "options": [
+      "first",
+      "second",
+      "third",
+      "fourth"
+    ],
+    "answer": "second"
+  },
+  {
+    "question": "At what pool was the sick man lying?",
+    "options": [
+      "Siloam",
+      "Bethesda",
+      "Jordan",
+      "Kedron"
+    ],
+    "answer": "Bethesda"
+  },
+  {
+    "question": "How long had the man been infirm?",
+    "options": [
+      "18 years",
+      "25 years",
+      "38 years",
+      "40 years"
+    ],
+    "answer": "38 years"
+  },
+  {
+    "question": "What did Jesus ask the man first?",
+    "options": [
+      "Can you walk?",
+      "Do you want to be made well?",
+      "Do you believe?",
+      "Where is your family?"
+    ],
+    "answer": "Do you want to be made well?"
+  },
+  {
+    "question": "What did Jesus tell the sick man to do?",
+    "options": [
+      "Run and shout",
+      "Rise, take up your bed and walk",
+      "Wash in the pool",
+      "Go home and sleep"
+    ],
+    "answer": "Rise, take up your bed and walk"
+  },
+  {
+    "question": "On what day was the man healed?",
+    "options": [
+      "Passover",
+      "Sabbath",
+      "New moon",
+      "Day of Atonement"
+    ],
+    "answer": "Sabbath"
+  },
+  {
+    "question": "Where did Jesus later find the healed man?",
+    "options": [
+      "At the sea",
+      "In the temple",
+      "At home",
+      "In the market"
+    ],
+    "answer": "In the temple"
+  },
+  {
+    "question": "What warning did Jesus give the healed man?",
+    "options": [
+      "Hide from the Jews",
+      "Sin no more",
+      "Leave Jerusalem",
+      "Fast for seven days"
+    ],
+    "answer": "Sin no more"
+  },
+  {
+    "question": "Why did the Jews persecute Jesus?",
+    "options": [
+      "He ate with sinners",
+      "He healed on the Sabbath",
+      "He left Galilee",
+      "He refused taxes"
+    ],
+    "answer": "He healed on the Sabbath"
+  },
+  {
+    "question": "What did Jesus say the Father had done until now?",
+    "options": [
+      "Rested",
+      "Worked",
+      "Judged no one",
+      "Hidden Himself"
+    ],
+    "answer": "Worked"
+  },
+  {
+    "question": "What did Jesus say the Son gives to whom He will?",
+    "options": [
+      "Bread",
+      "Life",
+      "Gold",
+      "Land"
+    ],
+    "answer": "Life"
+  },
+  {
+    "question": "Who did Jesus say testified about Him besides John?",
+    "options": [
+      "Only Peter",
+      "The Father",
+      "Pilate",
+      "Herod"
+    ],
+    "answer": "The Father"
+  },
+  {
+    "question": "Which writings did Jesus say testified of Him?",
+    "options": [
+      "David's songs only",
+      "Moses' writings",
+      "Roman laws",
+      "None"
+    ],
+    "answer": "Moses' writings"
+  },
+  {
+    "question": "What do those who hear Jesus' word and believe have?",
+    "options": [
+      "Riches",
+      "Eternal life",
+      "Long life only",
+      "A kingdom on earth"
+    ],
+    "answer": "Eternal life"
+  },
+  {
+    "question": "What miracle did Jesus do for a great crowd?",
+    "options": [
+      "Healed one blind man",
+      "Fed about five thousand",
+      "Raised Lazarus",
+      "Calmed a storm"
+    ],
+    "answer": "Fed about five thousand"
+  },
+  {
+    "question": "What food did a lad have?",
+    "options": [
+      "Seven loaves and fish",
+      "Five barley loaves and two small fish",
+      "Twelve baskets",
+      "Bread only"
+    ],
+    "answer": "Five barley loaves and two small fish"
+  },
+  {
+    "question": "Who asked, 'Where shall we buy bread?'",
+    "options": [
+      "Peter",
+      "Jesus",
+      "Andrew",
+      "Philip"
+    ],
+    "answer": "Jesus"
+  },
+  {
+    "question": "How many baskets of leftovers were gathered?",
+    "options": [
+      "Five",
+      "Seven",
+      "Twelve",
+      "Twenty"
+    ],
+    "answer": "Twelve"
+  },
+  {
+    "question": "What did the people want to do after the feeding miracle?",
+    "options": [
+      "Stone Jesus",
+      "Make Him king",
+      "Leave Him",
+      "Follow John"
+    ],
+    "answer": "Make Him king"
+  },
+  {
+    "question": "What did Jesus walk on?",
+    "options": [
+      "Sand",
+      "Water",
+      "Clouds",
+      "Stones"
+    ],
+    "answer": "Water"
+  },
+  {
+    "question": "What did Jesus say to the frightened disciples on the sea?",
+    "options": [
+      "Be silent",
+      "It is I; do not be afraid",
+      "Row faster",
+      "Come to shore"
+    ],
+    "answer": "It is I; do not be afraid"
+  },
+  {
+    "question": "What work of God did Jesus say they should do?",
+    "options": [
+      "Build the temple",
+      "Believe in Him whom He sent",
+      "Offer sacrifices",
+      "Keep every feast"
+    ],
+    "answer": "Believe in Him whom He sent"
+  },
+  {
+    "question": "What bread did Jesus call Himself?",
+    "options": [
+      "Bread from Egypt",
+      "Bread of life",
+      "Daily bread",
+      "Barley bread"
+    ],
+    "answer": "Bread of life"
+  },
+  {
+    "question": "Whose murmuring is mentioned after Jesus said He came down from heaven?",
+    "options": [
+      "Romans",
+      "The Jews",
+      "Samaritans",
+      "Greeks"
+    ],
+    "answer": "The Jews"
+  },
+  {
+    "question": "What did many disciples do after hearing Jesus' hard saying?",
+    "options": [
+      "They worshiped louder",
+      "They went back and walked with Him no more",
+      "They ran to Jerusalem",
+      "They became priests"
+    ],
+    "answer": "They went back and walked with Him no more"
+  },
+  {
+    "question": "Who said, 'You have the words of eternal life'?",
+    "options": [
+      "John",
+      "Peter",
+      "Thomas",
+      "Andrew"
+    ],
+    "answer": "Peter"
+  },
+  {
+    "question": "Which disciple did Jesus say was a devil?",
+    "options": [
+      "Judas Iscariot",
+      "Philip",
+      "Bartholomew",
+      "James"
+    ],
+    "answer": "Judas Iscariot"
+  }
+]
