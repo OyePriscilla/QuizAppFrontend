@@ -10,6 +10,8 @@ import mosesQuizData from "../data/MosesQuiz.json";
 import josephQuizData from "../data/JosephQuiz.json";
 import adamQuizData from "../data/AdamQuiz.json";
 import tacnHistoryData from "../data/TACNHistory.json";
+import tacnHistory2Data from "../data/TACNHistory2.json";
+import tenets from "../data/Tenets.json";
 
 // John chapter groups
 import John1_3 from "../data/John1_3.json";
@@ -38,6 +40,8 @@ const quizMap: Record<string, QuizItem[]> = {
   joseph: josephQuizData,
   adam: adamQuizData,
   tacnhistory: tacnHistoryData,
+  tacnhistory2: tacnHistory2Data,
+  tenets: tenets,
   john: [], // handled separately
 };
 

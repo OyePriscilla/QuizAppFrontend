@@ -12,12 +12,14 @@ const characters = [
   { name: "Peter", emoji: "🎣" },
   { name: "Paul", emoji: "✝️" },
   { name: "TACNHistory", emoji: "✝️" },
+  { name: "TACNHistory2", emoji: "✝️" },
   { name: "John", emoji: "✝️" },
+  {name: "Tenets", emoji: "📜"},
 
 ];
 
 // Only characters with available quizzes
-const availableQuizzes = ["Moses", "Joseph", "Adam", "TACNHistory", "John"];
+const availableQuizzes = ["Moses", "Joseph", "Adam", "TACNHistory", "John", "TACNHistory2", "Tenets"];
 
 const SelectQuiz = () => {
   const navigate = useNavigate();
